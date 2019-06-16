@@ -1,0 +1,27 @@
+{
+  "name": "suzuki",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.1.0",
+    "@material-ui/styles": "latest",
+    "clsx": "latest",
+    "cross-env": "^5.2.0",
+    "express": "^4.17.1",
+    "jss": "^9.8.7",
+    "mobile-detect": "^1.4.3",
+    "next": "latest",
+    "next-images": "^1.1.1",
+    "path-to-regexp": "^3.0.0",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-jss": "^8.6.1"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js"
+  }
+}

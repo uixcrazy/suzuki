@@ -1,0 +1,1285 @@
+@charset "UTF-8";
+/*----------------------------------------------------------
+更新日：2017年09月21日
+
+=フォント
+
+=基本ページレイアウト
+
+=テキストモジュール
+
+=ハイパーテキストモジュール
+
+=リストモジュール
+
+=共通スタイル
+
+=ヘッダエリア
+	=ナビ
+
+=国別エリア(#country-area)
+
+=スライドエリア(#slider-pro)
+
+=サブナビエリア(#sub-nav)
+
+=コンテンツエリア
+	=NEWSエリア(#news-area)
+	=リンクエリア(#link-area)
+	
+=フッタエリア
+
+=PCサイズ切替時スマホ用アコーディオン非表示
+
+=タブレット
+	=TLテキストモジュール
+	=TLハイパーテキストモジュール
+	=TLヘッダエリア
+	=TL国別エリア(#country-area)
+	=TLサブナビエリア(#sub-nav)
+	=TL NEWSエリア(#news-area)
+	=TLリンクエリア(#link-area)
+	=TLフッタエリア
+
+=スマホ
+	=SP国別エリア(#country-area)
+	=SPサブナビエリア(#sub-nav)
+	=SPスライドエリア(#slider-pro)
+	=SP NEWSエリア(#news-area)
+	=SPリンクエリア(#link-area)
+-------------------------------------------------------------*/
+/* =フォント
+------------------------------------------------------------*/
+@font-face {
+  font-family: 'SuzukiPROHeadline';
+  src: url("/font/SuzukiPROHeadline.ttf") format("truetype"), url("/font/SuzukiPROHeadline.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SuzukiPRORegular';
+  src: url("/font/SuzukiPRORegular.ttf") format("truetype"), url("/font/SuzukiPRORegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'SuzukiPROBold';
+  src: url("/font/SuzukiPROBold.ttf") format("truetype"), url("/font/SuzukiPROBold.woff") format("woff");
+}
+
+/* =基本ページレイアウト
+------------------------------------------------------------*/
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #1b1b1b;
+  line-height: 1;
+  text-align: center;
+  font-size: 80%;
+  background: #003145;
+  font-family: SuzukiPRORegular, Arial, Helvetica, sans-serif;
+}
+
+article {
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.4;
+  text-align: left;
+  margin-bottom: 0;
+  background: #003145;
+  width: 100%;
+  position: relative;
+}
+
+/* =テキストモジュール
+------------------------------------------------------------*/
+h1 {
+  color: #fff;
+  font-size: 180%;
+  font-family: SuzukiPROBold;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: SuzukiPROBold;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* =ハイパーテキストモジュール
+------------------------------------------------------------*/
+a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1b1b1b;
+  text-decoration: underline;
+}
+
+a img {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn a {
+  border: solid 1px #fff;
+  text-transform: uppercase;
+  font-size: 96%;
+  font-family: SuzukiPROBold;
+  padding: 8px 40px 7px 36px;
+  position: relative;
+  margin-right: 30px;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn a:hover {
+  text-decoration: none;
+  background: #fff;
+  color: #1b1b1b;
+}
+
+.btn a:hover:after {
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background: url("/img/common/arrow_r6.png") no-repeat 0 0;
+  -ms-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  right: 26px;
+  top: 32%;
+}
+
+.btn a:after {
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background: url("/img/common/arrow_r3.png") no-repeat 0 0;
+  -ms-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  right: 26px;
+  top: 32%;
+}
+
+#cboxClose,
+#cboxClose:hover {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("/img/common/close_btn2.png") no-repeat 0 0;
+  -ms-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+
+/*
+@mixin touka {
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity:0.7;
+}
+
+a:hover img {
+	@include touka;
+}
+*/
+/* =リストモジュール
+------------------------------------------------------------*/
+ul, ol, dl {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  margin-left: 15px;
+}
+
+/* =共通スタイル
+------------------------------------------------------------*/
+section {
+  margin-bottom: 20px;
+}
+
+.sp,
+.menu {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.left-area {
+  float: left;
+}
+
+.right-area {
+  float: right;
+}
+
+/* =ヘッダエリア
+-------------------------------------------------------------*/
+header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  display: table;
+  background: #323232;
+  text-transform: uppercase;
+  font-family: SuzukiPROHeadline;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* ナビ */
+header nav {
+  width: auto;
+  display: table-cell;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul:first-of-type {
+  text-align: right;
+  background: #fff;
+  font-size: 100%;
+  font-family: SuzukiPRORegular;
+  padding: 10px 20px 10px 0;
+}
+
+header nav ul:first-of-type li {
+  display: inline;
+  margin-right: 8px;
+}
+
+header nav ul:first-of-type li:last-of-type {
+  margin-right: 0;
+}
+
+header nav ul:first-of-type li:nth-of-type(3) {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: solid 1px #1b1b1b;
+  border-right: solid 1px #1b1b1b;
+}
+
+header nav ul:first-of-type img {
+  width: 17px;
+  margin-right: 4px;
+}
+
+header nav ul:nth-of-type(2) li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: -3px;
+  font-size: 140%;
+}
+
+header nav ul:nth-of-type(2) li a:hover {
+  background: #fff;
+  color: #323232;
+}
+
+header nav ul:nth-of-type(2) li a {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  padding: 4px 0 3.4px 0;
+  color: #fff;
+}
+
+header nav ul:nth-of-type(2) li a:hover {
+  text-decoration: none;
+}
+
+/* sarari */
+/*
+_::-webkit-full-page-media, _:future, :root header nav ul:nth-of-type(2) li a {
+	padding:7.5px 0 7px 0;
+}
+*/
+/* =国別エリア(#country-area)
+------------------------------------------------------------*/
+#country-area {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  color: #323232;
+  position: relative;
+}
+
+#country-area > h1 {
+  text-align: center;
+  padding: 6px 0;
+  cursor: pointer;
+  margin-top: -1px;
+}
+
+#country-area > h1 img {
+  width: 208px;
+  pointer-event: none;
+}
+
+#country-area > h1:hover {
+  background: #e1261c;
+}
+
+#country-area > h1.open {
+  cursor: default;
+  background: #fff;
+}
+
+#country-area > section.pc {
+  display: none;
+  text-align: center;
+  padding-bottom: 30px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 44px;
+  z-index: 10;
+  width: 100%;
+}
+
+#country-area > section.pc:before {
+  display: block;
+  content: "";
+  width: 760px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 1px;
+  background: #323232;
+}
+
+#country-area > section.pc h1 {
+  margin: 0;
+  padding: 0;
+  color: #323232;
+  display: inline-block;
+  width: 320px;
+  text-align: left;
+  margin-top: 30px;
+  padding-right: 0;
+  font-size: 180%;
+}
+
+#country-area > section.pc h1 img {
+  width: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#country-area > section.pc > ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 410px;
+  padding-left: 40px;
+  text-align: left;
+  vertical-align: top;
+  margin-top: 30px;
+  border-left: solid 1px #323232;
+}
+
+#country-area > section.pc > ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#country-area > section.pc > ul li:before {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  display: block;
+  content: "";
+  width: 110px;
+  height: 16px;
+  background: #003145;
+  text-align: center;
+  text-transform: none;
+  padding: 2px 0;
+  color: #fff;
+}
+
+#country-area > section.pc > ul li.car:before {
+  content: "Automobile";
+}
+
+#country-area > section.pc > ul li.bike:before {
+  content: "Motorcycle / ATV";
+}
+
+#country-area > section.pc > ul li.ship:before {
+  content: "Marine";
+}
+
+#country-area > section.pc > ul li:after {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 11px;
+  background: url("/img/common/sp/blank_icon.png") no-repeat left center;
+  -ms-background-size: 100% auto;
+  background-size: 100% auto;
+  margin-left: 10px;
+}
+
+#country-area > section.pc a {
+  color: #004b9c;
+  text-decoration: underline;
+  margin-left: 125px;
+}
+
+#country-area > section.pc a:hover {
+  text-decoration: none;
+}
+
+#country-area > section.pc ul + p {
+  width: 768px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-right: 12px;
+  text-align: right;
+}
+
+#country-area > section.pc ul + p a {
+  position: relative;
+}
+
+#country-area > section.pc ul + p a:after {
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background: url("/img/common/arrow_r5.png") no-repeat 0 0;
+  -ms-background-size: 100% auto;
+  background-size: 100% auto;
+  position: absolute;
+  right: -12px;
+  top: 2px;
+}
+
+#country-area p.close-btn {
+  width: 50px;
+  position: absolute;
+  right: 25px;
+  top: 0;
+  cursor: pointer;
+}
+
+/* =スライドエリア(#slider-pro)
+------------------------------------------------------------*/
+#slider-pro {
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.sp-horizontal .sp-arrows {
+  margin-top: -20px;
+}
+
+.sp-selected-thumbnail {
+  position: relative;
+}
+
+.sp-selected-thumbnail:before {
+  display: block;
+  content: "";
+  width: 155px;
+  height: 65px;
+  background: #003145;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sp-top-thumbnails .sp-thumbnail-arrows,
+.sp-bottom-thumbnails .sp-thumbnail-arrows {
+  margin-top: -23px;
+}
+
+.sp-thumbnail-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.sp-previous-thumbnail-arrow:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("/img/top/slide/arrow_l.png") no-repeat 0 center;
+  -ms-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+.sp-next-thumbnail-arrow:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("/img/top/slide/arrow_r.png") no-repeat 0 center;
+  -ms-background-size: 100% auto;
+  background-size: 100% auto;
+}
+
+/*
+.sp-thumbnail-arrows {
+	div {
+		display:block !important;
+	}
+}
+*/
+/* =サブナビエリア(#sub-nav)
+------------------------------------------------------------*/
+#sub-nav {
+  background: #003145;
+  text-transform: uppercase;
+  font-size: 140%;
+  font-family: SuzukiPROHeadline;
+}
+
+#sub-nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#sub-nav li {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+#sub-nav a {
+  color: #fff;
+  padding: 10px;
+}
+
+#sub-nav .current a {
+  border: solid 1px #fff;
+  padding: 10px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#sub-nav .current a:hover {
+  text-decoration: none;
+}
+
+/* =コンテンツエリア
+-------------------------------------------------------------*/
+article {
+  width: article haba;
+}
+
+/* =NEWSエリア(#news-area) */
+#news-area {
+  background: #000;
+  margin: 0 !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#news-area h1 {
+  text-transform: uppercase;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#news-area ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 90%;
+  margin-bottom: 20px;
+}
+
+#news-area ul li:nth-of-type(odd) {
+  background: #1b1b1b;
+}
+
+#news-area ul li:nth-of-type(even) {
+  background: #323232;
+}
+
+#news-area ul a {
+  color: #878787;
+  display: block;
+  padding: 14px 20px;
+  background: url("/img/common/arrow_r2.png") no-repeat 98% center;
+  -ms-background-size: 10px 17px;
+  background-size: 10px 17px;
+}
+
+#news-area ul strong {
+  width: 100px;
+  display: inline-block;
+}
+
+#news-area p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* =リンクエリア(#link-area) */
+#link-area {
+  background: #fff;
+  padding: 0;
+  padding-bottom: 30px;
+}
+
+#link-area ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-left: solid 1px #323232;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#link-area li {
+  width: 14.28%;
+  float: left;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-top: solid 1px #323232;
+  border-right: solid 1px #323232;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#link-area li:last-of-type {
+  margin: 0;
+  padding: 0;
+}
+
+#link-area li a {
+  background: #323232;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+#link-area li a:hover {
+  text-decoration: none;
+}
+
+#link-area li a:hover img {
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+
+#link-area li figure {
+  background: #003145;
+}
+
+#link-area li figcaption {
+  padding: 4px 0;
+  background: #003145;
+}
+
+/* =フッタエリア
+-------------------------------------------------------------*/
+footer {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 30px 0 20px 0;
+}
+
+footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+footer dt {
+  text-transform: uppercase;
+  font-size: 90%;
+  float: left;
+  margin-right: 20px;
+  padding-top: 2px;
+}
+
+footer dd {
+  float: left;
+  margin-right: 20px;
+}
+
+footer #facebook {
+  width: 8px;
+}
+
+footer #tube {
+  width: 25px;
+}
+
+footer p:first-of-type {
+  position: absolute;
+  right: 14%;
+  top: 4px;
+}
+
+footer p:last-of-type {
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+footer a {
+  color: #d2d2d2;
+  font-size: 80%;
+}
+
+footer a:visited {
+  color: #d2d2d2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #d2d2d2;
+}
+
+footer a:before {
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background: url("/img/common/arrow_r3.png") no-repeat 0 0;
+  -ms-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  left: -14px;
+  top: 3px;
+}
+
+/* =PCサイズ切替時スマホ用アコーディオン非表示 */
+@media screen and (min-width: 1023px) {
+  header nav ul.sp,
+  #country-area section.sp {
+    display: none !important;
+  }
+}
+
+
+/* =タブレット
+-------------------------------------------------------------*/
+@media screen and (max-width: 1023px) {
+  /* =TLテキストモジュール */
+  h1 {
+    font-size: 15px;
+  }
+  /* =TLハイパーテキストモジュール */
+  .btn a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #1b1b1b;
+  }
+  .btn a:hover:after {
+    display: inline-block;
+    content: "";
+    width: 7px;
+    height: 12px;
+    background: url("/img/common/arrow_r6.png") no-repeat 0 0;
+    -ms-background-size: 100%;
+    background-size: 100%;
+    position: absolute;
+    right: 50%;
+    top: 38%;
+    margin-right: -34px;
+  }
+  .btn a:after {
+    right: 50%;
+    top: 38%;
+    margin-right: -34px;
+  }
+  /* =TLヘッダエリア */
+  header nav ul {
+    display: none;
+  }
+  header {
+    background: #fff;
+  }
+  header .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    display: block;
+    width: 70px;
+    height: 70px;
+    float: right;
+    background: url("/img/common/sp/menu_close.gif") no-repeat 0 0;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  header .sp {
+    position: absolute;
+    left: 0;
+    top: 69px;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+  header .sp li {
+    margin: 0 30px;
+    padding: 0 10px;
+    position: relative;
+  }
+  header .sp li:nth-of-type(1), header .sp li:nth-of-type(2), header .sp li:nth-of-type(3) {
+    border-bottom: solid 1px #d2d2d2;
+  }
+  header .sp li:nth-of-type(1):after, header .sp li:nth-of-type(2):after, header .sp li:nth-of-type(3):after {
+    display: block;
+    content: "";
+    width: 9px;
+    height: 15px;
+    background: url("/img/common/arrow_r2.png") no-repeat 0 0;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -7px;
+  }
+  header .sp a {
+    display: block;
+    padding: 15px 0;
+  }
+  /* =TL国別エリア(#country-area) */
+  #country-area {
+    max-width: auto;
+    margin-left: 140px;
+    margin-right: 70px;
+    margin-top: -71px;
+    height: 70px;
+    color: #323232;
+    position: static;
+  }
+  #country-area h1.pc {
+    display: none;
+  }
+  #country-area > section.pc {
+    display: none !important;
+  }
+  #country-area h1.sp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: block;
+    padding: 0;
+    height: 70px;
+  }
+  #country-area h1.sp img:first-of-type {
+    margin-top: 22px;
+  }
+  #country-area h1.sp img:last-of-type {
+    width: 37px;
+    margin: 0 auto;
+    margin-top: 18px;
+    display: none;
+  }
+  #country-area h1.sp:hover {
+    background: #fff;
+  }
+  #country-area section.sp {
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    padding-bottom: 30px;
+    width: 100% !important;
+  }
+  #country-area section.sp h1 {
+    cursor: default;
+    color: #323232;
+    margin: 0 30px;
+    padding: 30px 10px;
+    height: auto;
+    border-bottom: solid 1px #d2d2d2;
+    font-size: 140%;
+  }
+  #country-area section.sp h1 img {
+    width: auto;
+    display: inline;
+    margin-right: 10px;
+  }
+  #country-area section.sp ul {
+    margin: 0 30px;
+    padding: 30px 10px;
+    border-bottom: solid 1px #d2d2d2;
+    margin-bottom: 20px;
+  }
+  #country-area section.sp li {
+    margin-bottom: 30px;
+    padding-left: 120px;
+    position: relative;
+  }
+  #country-area section.sp li:last-of-type {
+    margin: 0;
+  }
+  #country-area section.sp li:before {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    display: block;
+    content: "";
+    width: 110px;
+    height: 16px;
+    background: #003145;
+    text-align: center;
+    text-transform: none;
+    padding: 2px 0;
+    color: #fff;
+  }
+  #country-area section.sp li.car:before {
+    content: "Automobile";
+  }
+  #country-area section.sp li.bike:before {
+    content: "Motorcycle / ATV";
+  }
+  #country-area section.sp li.ship:before {
+    content: "Marine";
+  }
+  #country-area section.sp li:after {
+    display: inline-block;
+    content: "";
+    width: 14px;
+    height: 11px;
+    background: url("/img/common/sp/blank_icon.png") no-repeat left center;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+    margin-left: 10px;
+  }
+  #country-area section.sp li a {
+    color: #004b9c;
+    text-decoration: underline;
+  }
+  #country-area section.sp li a:hover {
+    text-decoration: none;
+  }
+  #country-area section.sp > p {
+    margin: 0 40px;
+    text-align: right;
+  }
+  #country-area section.sp > p a {
+    color: #004b9c;
+    font-family: SuzukiPROBold;
+    text-decoration: underline;
+  }
+  #country-area section.sp > p a:hover {
+    text-decoration: none;
+  }
+  #country-area section.sp > p:after {
+    display: inline-block;
+    content: "";
+    width: 7px;
+    height: 12px;
+    background: url("/img/common/arrow_r.png") no-repeat left center;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  /* =TLサブナビエリア(#sub-nav) */
+  #sub-nav li {
+    margin: 0 10px;
+  }
+  /* =TL NEWSエリア(#news-area) */
+  #news-area {
+    padding-top: 20px;
+  }
+  #news-area h1 {
+    margin-left: 20px;
+  }
+  #news-area ul {
+    margin-bottom: 30px;
+  }
+  #news-area ul a {
+    padding: 14px 20px 14px 50px;
+    background: url("/img/common/arrow_r2.png") no-repeat 20px center;
+    -ms-background-size: 7px 12px;
+    background-size: 7px 12px;
+  }
+  #news-area ul strong {
+    width: auto;
+    display: block;
+  }
+  #news-area p a {
+    width: 75%;
+    padding: 20px 0;
+    margin: 0;
+  }
+  /* =TLリンクエリア(#link-area) */
+  #link-area {
+    padding: 0 !important;
+  }
+  #link-area ul {
+    border-top: solid 1px #000;
+    display: block;
+  }
+  #link-area li {
+    width: 25%;
+    float: left;
+    margin-right: 0;
+    border-top: none;
+    border-right: solid 1px #000;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* =TLフッタエリア */
+  footer {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  footer dl {
+    text-align: center;
+  }
+  footer dt {
+    text-transform: uppercase;
+    font-size: 15px;
+    float: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  footer dd {
+    float: none;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0;
+    margin-bottom: 80px;
+  }
+  footer dd:last-of-type {
+    margin: 0;
+  }
+  footer #pinItWrap img {
+    width: 18px;
+  }
+  footer #facebook {
+    width: 8px;
+  }
+  footer #tube {
+    width: 25px;
+  }
+  footer p:first-of-type {
+    position: static;
+    font-size: 10px;
+  }
+  footer p:last-of-type {
+    position: static;
+    margin: 0 20px;
+    margin-top: -90px;
+    font-size: 14px;
+  }
+  footer p:last-of-type a {
+    display: block;
+    padding: 16px 0;
+    position: relative;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+  }
+  footer p:last-of-type a:before {
+    display: inline-block;
+    content: "";
+    width: 7px;
+    height: 12px;
+    background: url("/img/common/arrow_r3.png") no-repeat 0 0;
+    -ms-background-size: 100%;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -78px;
+    top: 17px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  #country-area h1.sp img.sp {
+    display: none !important;
+  }
+}
+
+/* タブレットここまで */
+/* =スマホ
+-------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /* =SP国別エリア(#country-area) */
+  #country-area h1.sp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  #country-area h1.sp img:first-of-type {
+    display: none !important;
+  }
+  #country-area h1.sp img.sp {
+    display: block;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+  }
+  #country-area h1.sp img:last-of-type {
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+  /* =SPスライドエリア(#slider-pro) */
+  #slider-pro {
+    padding-bottom: 0;
+  }
+  .sp-horizontal .sp-arrows {
+    margin-top: -15px;
+  }
+  .sp-arrow {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  .sp-horizontal .sp-previous-arrow {
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .sp-horizontal .sp-next-arrow {
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .sp-selected-thumbnail:before {
+    width: 100px;
+    height: 42px;
+  }
+  #thum-img {
+    margin: 0;
+  }
+  .sp-top-thumbnails .sp-thumbnail-arrows,
+  .sp-bottom-thumbnails .sp-thumbnail-arrows {
+    margin-top: -27px;
+  }
+  .sp-thumbnail-arrow {
+    width: 14px;
+    height: 14px;
+  }
+  .sp-previous-thumbnail-arrow:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("/img/top/slide/arrow_l.png") no-repeat 0 0;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .sp-next-thumbnail-arrow:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 30px;
+    background: url("/img/top/slide/arrow_r.png") no-repeat 0 0;
+    -ms-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  /* =SPサブナビエリア(#sub-nav) */
+  #sub-nav ul {
+    padding: 10px 0;
+  }
+  #sub-nav li {
+    display: block;
+    margin: 0;
+    float: left;
+    width: 33.33333%;
+  }
+  #sub-nav li.current a {
+    padding: 9px;
+  }
+  #sub-nav a {
+    color: #fff;
+    display: block;
+    padding: 10px 0;
+  }
+  /* =SP NEWSエリア(#news-area) */
+  #news-area h1 {
+    margin-left: 10px;
+  }
+  #news-area ul a {
+    padding: 14px 20px 14px 30px;
+    background: url("/img/common/arrow_r2.png") no-repeat 10px center;
+    -ms-background-size: 7px 12px;
+    background-size: 7px 12px;
+  }
+  /* =SPリンクエリア(#link-area) */
+  #link-area {
+    padding: 0;
+  }
+  #link-area li {
+    float: left;
+    width: 33.33333%;
+    font-size: 10px;
+  }
+
+	
+}
+
+/* スマホここまで */

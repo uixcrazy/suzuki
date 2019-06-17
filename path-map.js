@@ -3,6 +3,8 @@ const removeDiacritics = require('./core/remove-diacritics');
 
 const pathMap = {
   "/xe-oto/:slug(.*)-:id(\\d+)": { page: "/oto" },
+  // xe-du-lich
+  // xe-tai-nho
 };
 
 module.exports.pathMap = pathMap;

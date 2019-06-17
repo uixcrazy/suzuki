@@ -25,7 +25,8 @@ export default class Index extends React.Component {
         isMobile={this.props.isMobile}
         Header={Header}
       >
-        <h2
+        aaa
+        {/* <h2
         style={{
           display: 'block',
           textAlign: 'center',
@@ -40,7 +41,7 @@ export default class Index extends React.Component {
         <Cards
           isMobile={this.props.isMobile}
           items={this.props.data}
-        />
+        /> */}
       </Layout>
     )
   }

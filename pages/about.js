@@ -1,5 +1,5 @@
 import Layout from '../components/layout';
-import Detail from '../components/car/Index';
+import Detail from '../components/car-suzuki/Index';
 // import header
 // header sẽ nhận images để show ra
 

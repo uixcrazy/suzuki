@@ -2,8 +2,8 @@ const p2Rex = require("path-to-regexp");
 const removeDiacritics = require('./core/remove-diacritics');
 
 const pathMap = {
-  "/xe-du-lich/:slug(.*)": { page: "/car" },
-  "/xe-tai-nho/:slug(.*)": { page: "/carry" },
+  "/xe-du-lich/suzuki/:slug(.*)": { page: "/car-suzuki" },
+  "/xe-tai-nho/suzuki/:slug(.*)": { page: "/carry-suzuki" },
 };
 
 module.exports.pathMap = pathMap;

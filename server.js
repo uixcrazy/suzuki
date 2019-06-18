@@ -18,13 +18,13 @@ app.prepare().then(() => {
     app.render(req, res, actualPage, req.query);
   });
 
-  server.get("/xe-du-lich/:slug([^/]+)", (req, res) => {
-    const actualPage = "/car";
+  server.get("/xe-du-lich/suzuki/:slug([^/]+)", (req, res) => {
+    const actualPage = "/car-suzuki";
     const queryParams = { id: req.params.id, slug: req.params.slug };
     app.render(req, res, actualPage, queryParams);
   });
-  server.get("/xe-tai-nho/:slug([^/]+)", (req, res) => {
-    const actualPage = "/carry";
+  server.get("/xe-tai-nho/suzuki/:slug([^/]+)", (req, res) => {
+    const actualPage = "/carry-suzuki";
     const queryParams = { id: req.params.id, slug: req.params.slug };
     app.render(req, res, actualPage, queryParams);
   });

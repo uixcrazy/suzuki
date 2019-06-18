@@ -2,7 +2,6 @@ import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
 import flush from 'styled-jsx/server';
-import '../static/style.scss'
 
 import theme from '../components/theme';
 
@@ -16,7 +15,6 @@ class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
           {/* PWA primary color */}
           <meta name="theme-color" content={"#0b3145"} />
-          {/* <link rel="stylesheet" href="/_next/static/style.css" /> */}
         </Head>
         <body>
           <Main />

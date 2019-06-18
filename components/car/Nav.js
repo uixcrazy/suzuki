@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-const NavDesktop = ({
+const Nav = ({
   classes,
   boxActive = "about",
   navList = [
@@ -16,11 +16,10 @@ const NavDesktop = ({
     {navList.map((item, index) => (
       <li
         key={index}
+        onClick={() => updateBoxActive(item.scrollName)}
         className={[classes.item, boxActive === item.scrollName ? 'active' : ''].join(' ')}
       >
-        <button onClick={() => updateBoxActive(item.scrollName)}>
-          {item.name}
-        </button>
+        {item.name}
       </li>
     ))}
   </ul>
@@ -70,4 +69,4 @@ const styles = theme => ({
   },
 });
 
-export default withStyles(styles)(NavDesktop);
+export default withStyles(styles)(Nav);

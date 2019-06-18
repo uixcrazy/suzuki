@@ -22,10 +22,13 @@ export default class Index extends React.Component {
     return (
       <Layout
         title='🚖 🚘 xe ô tô du lịch vs xe tải Suzuki tại Nguyễn Duy Trinh - TPHCM '
-        isMobile={this.props.isMobile}
         Header={Header}
       >
-        aaa
+        <main>
+          <div className="container">
+            aaa
+          </div>
+        </main>
         {/* <h2
         style={{
           display: 'block',

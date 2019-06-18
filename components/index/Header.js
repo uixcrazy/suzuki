@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
 import Link from 'next/link';
-
-import Container from '@material-ui/core/Container';
 
 import TopMenu from '../layout/TopMenu';
 import Banner from './Banner';
@@ -44,9 +41,9 @@ const Header = props => {
       <div className={classes.banner}>
         <Banner isMobile={props.isMobile}/>
       </div>
+
       <TopMenu isMobile={props.isMobile}/>
-      <Container maxWidth="lg">
-        {/* <Toolbar className={classes.toolbar}> */}
+      <div className="container">
         <Link href="/">
           <a>
             <img
@@ -56,9 +53,7 @@ const Header = props => {
             />
           </a>
         </Link>
-        {/* </Toolbar> */}
-        {/* {Nav && <Nav />} */}
-      </Container>
+        </div>
     </header>
   );
 };

@@ -5,7 +5,7 @@ import _debounce from "lodash.debounce";
 import { withStyles } from '@material-ui/styles';
 import { Element, scroller } from 'react-scroll';
 
-import NavDesktop from './NavDesktop';
+import Nav from './Nav';
 import Box from './Box';
 import About from './About';
 import Design from './Design';
@@ -72,7 +72,7 @@ class Index extends Component {
       duration: 500,
       delay: 0,
       smooth: 'easeOutQuad',
-      containerId: 'scroll-container',
+      // containerId: 'scroll-container',
       // offset: -5,
     })
     this.setState({boxActive});
@@ -89,8 +89,7 @@ class Index extends Component {
     return (
       <React.Fragment>
         <div>
-          <NavDesktop
-            // isMobile={isMobile}
+          <Nav
             boxActive={boxActive}
             navList={dataNavigation}
             updateBoxActive={this.updateBoxActive}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import _debounce from "lodash.debounce";
 import { withStyles } from '@material-ui/styles';
+import { StickyContainer, Sticky } from 'react-sticky';
 import { Element, scroller } from 'react-scroll';
 
 import Nav from './Nav';
@@ -37,7 +38,6 @@ class Index extends Component {
   state = {
     boxActive: 'about',
   }
-
 
   componentDidMount() {
     this.main.addEventListener("scroll", _debounce(() => {
@@ -87,38 +87,45 @@ class Index extends Component {
     const { boxActive } = this.state;
 
     return (
-      <React.Fragment>
-        <div>
-          <Nav
-            boxActive={boxActive}
-            navList={dataNavigation}
-            updateBoxActive={this.updateBoxActive}
-          />
-        </div>
+      <StickyContainer
+        style={{
+          height: '1500px',
+          background: '#ddd',
+        }}
+      >
+        <Sticky>
+          {({ style }) => (
+            <Nav
+              style={{...style,...{zIndex: 10}}}
+              boxActive={boxActive}
+              navList={dataNavigation}
+              updateBoxActive={this.updateBoxActive}
+            />
+          )}
+        </Sticky>
+
         <div
           id="scroll-container"
           ref={DOM => this.main = DOM}
           className={[classes.main, isMobile ? "isMobile" : "", "scroll-vertical"].join(" ")}
           >
-          {
-            data.map(box => {
-              const BoxContent = box.component;
-              return (
-                <Element
-                  name={box.id}
-                  key={box.id}
-                  ref={DOM => this.router[box.id] = DOM}>
-                  <div className="container">
-                    <Box isCurrent={box.id === boxActive} isMobile={isMobile}>
-                      <BoxContent isMobile={isMobile}/>
-                    </Box>
-                  </div>
-                </Element>
-              )
-            })
-          }
+          {data.map(box => {
+            const BoxContent = box.component;
+            return (
+              <Element
+                name={box.id}
+                key={box.id}
+                ref={DOM => this.router[box.id] = DOM}>
+                <div className="container">
+                  <Box isCurrent={box.id === boxActive} isMobile={isMobile}>
+                    <BoxContent isMobile={isMobile}/>
+                  </Box>
+                </div>
+              </Element>
+            )
+          })}
         </div>
-      </React.Fragment>
+      </StickyContainer>
     )
   }
 }

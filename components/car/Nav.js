@@ -1,33 +1,44 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-const Nav = ({
-  classes,
-  boxActive = "about",
-  navList = [
-    {name: "About", scrollName: "about"},
-    {name: "Services", scrollName: "services"},
-    {name: "Clients", scrollName: "clients"},
-    {name: "Contact", scrollName: "contact"},
-  ],
-  updateBoxActive = () => {console.log("click to sidebar!!!")},
-}) => (
-  <ul className={classes.sidenav}>
-    {navList.map((item, index) => (
-      <li
-        key={index}
-        onClick={() => updateBoxActive(item.scrollName)}
-        className={[classes.item, boxActive === item.scrollName ? 'active' : ''].join(' ')}
-      >
-        {item.name}
-      </li>
-    ))}
-  </ul>
-);
+export class Nav extends React.Component {
+  render() {
+    const {
+      style,
+      classes,
+      boxActive = "about",
+      navList = [
+        {name: "About", scrollName: "about"},
+        {name: "Services", scrollName: "services"},
+        {name: "Clients", scrollName: "clients"},
+        {name: "Contact", scrollName: "contact"},
+      ],
+      updateBoxActive = () => {console.log("click to sidebar!!!")},
+    } = this.props;
+    return (
+      <div style={style}>
+        <ul className={classes.sidenav}>
+          {navList.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => updateBoxActive(item.scrollName)}
+              className={[classes.item, boxActive === item.scrollName ? 'active' : ''].join(' ')}
+            >
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+}
 
 const styles = theme => ({
   sidenav: {
-    display: 'flex'
+    display: 'flex',
+    background: 'var(--secondary)',
+    color: '#fff',
+    position: 'relative',
   },
   item: {
     position: 'relative',

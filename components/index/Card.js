@@ -3,22 +3,23 @@ import useStyles from './Card.style';
 import { makeSlug } from '../../path-map';
 import Link from 'next/link';
 
-
 const Card = ({
   item = {
-    id: 123,
-    thumb: 'http://templatecs.com/demo/template/car/images/b-img-2.jpg',
-    name: 'FORD MUSTANG 2016 TURBO',
-    slogan: 'Thuần chất Sedan',
-    price: 329,
-  }
+    thumb: 'http://lvtd.96.lt/swift/swift-thumb.png',
+    id: 'swift',
+    name: 'SWIFT',
+    slogan: 'Nâng tầm phong cách',
+    price: 549,
+    priceType: 'exact', // exact | min | text
+  },
+  path = "/xe-du-lich/suzuki/"
 }) => {
   const classes = useStyles();
   return (
     <div className={classes.productItem}>
       <Link
-        as={`/xe-oto/${makeSlug(item.name, item.id)}`}
-        href={`/xe-oto/${makeSlug(item.name, item.id)}`}
+        as={`${path}${makeSlug(item.id)}`}
+        href={`${path}${makeSlug(item.id)}`}
       >
         <a className={classes.productImgWrapper}>
           <img className={classes.productImg}
@@ -32,8 +33,8 @@ const Card = ({
         <div className={classes.left}>
           <h3 className={classes.productName}>
             <Link
-              as={`/xe-oto/${makeSlug(item.name, item.id)}`}
-              href={`/xe-oto/${makeSlug(item.name, item.id)}`}
+              as={`${path}${makeSlug(item.id)}`}
+              href={`${path}${makeSlug(item.id)}`}
             >
               <a>{item.name}</a>
             </Link>

@@ -11,13 +11,14 @@ export default ({
   title = 'This is the default title',
   Header = HeaderDefault,
   Footer = FooterDefault,
+  isMobile = false,
 }) => {
   return (
     <React.Fragment>
       <Head>
         <title>{title}</title>
       </Head>
-      {Header && <Header />}
+      {Header && <Header isMobile={isMobile}/>}
       {children}
       {Footer && <Footer />}
     </React.Fragment>

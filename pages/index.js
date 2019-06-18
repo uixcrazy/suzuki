@@ -23,28 +23,32 @@ export default class Index extends React.Component {
       <Layout
         title='🚖 🚘 xe ô tô du lịch vs xe tải Suzuki tại Nguyễn Duy Trinh - TPHCM '
         Header={Header}
+        isMobile={this.props.isMobile}
       >
-        <main>
+        <main style={{margin: '15px 0'}}>
           <div className="container">
-            aaa
+            <h2
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              padding: '0 20px',
+              fontSize: this.props.isMobile ? 18 : 24,
+              lineHeight: '50px',
+              color: '#777',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+            }}
+            >
+              Các dòng xe du lịch của <span style={{color: '#0b3145'}}>Suzuki</span>
+            </h2>
+            <Cards
+              isMobile={this.props.isMobile}
+              items={this.props.data["xe-du-lich"]}
+              path="/xe-du-lich/suzuki/"
+            />
           </div>
         </main>
-        {/* <h2
-        style={{
-          display: 'block',
-          textAlign: 'center',
-          padding: '0 20px',
-          fontSize: '22px',
-          lineHeight: '50px',
-          color: '#777',
-          textTransform: 'uppercase',
-          fontWeight: 'bold',
-        }}
-        >Các dòng xe du lịch &amp; xe tải / xe thương mại <span style={{color: '#0b3145'}}>Suzuki</span> chính hãng</h2>
-        <Cards
-          isMobile={this.props.isMobile}
-          items={this.props.data}
-        /> */}
+        {/* &amp; xe tải / xe thương mại  */}
       </Layout>
     )
   }

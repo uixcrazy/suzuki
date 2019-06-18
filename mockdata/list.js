@@ -1,56 +1,46 @@
+// description
 const data = {
   "xe-du-lich": [
     {
-      thumb: 'http://templatecs.com/demo/template/car/images/b-img-2.jpg',
-      id: 111,
-      // description
-      name: 'HYUNDAI ELANTRA 2016 NEW MODEL',
-      slogan: 'Nâng Tầm Phong Cách',
-      price: 329,
+      id: 'swift',
+      thumb: 'http://lvtd.96.lt/swift/swift-thumb.jpg',
+      name: 'SWIFT',
+      slogan: 'Nâng tầm phong cách',
+      price: 549,
       priceType: 'exact', // exact | min | text
+    },
+    {
+      id: 'celerio',
+      thumb: 'http://lvtd.96.lt/celerio/celerio-thumb.jpg',
+      name: 'Celerio',
+      slogan: 'Xe nhỏ ý tưởng lớn',
+      price: 329,
+      priceType: 'exact',
+    },
+    {
+      id: 'ciaz',
+      thumb: 'http://lvtd.96.lt/ciaz/ciaz-thumb.jpg',
+      name: 'Ciaz',
+      slogan: 'Thuần chất Sedan',
+      price: 499,
+      priceType: 'exact',
     },
   ],
   "xe-tai-nho": [
 
   ]
+
+// CÁC DÒNG XE THƯƠNG MẠI
+// Super-carry-pro-thumbnail.jpg
+// CARRY PRO
+// Người bạn đường lý tưởng
+// 312,000,000 VND
+// Super-carry-truck-thumbnail.jpg
+// CARRY TRUCK
+// Xe tải hàng nhẹ hàng đầu
+// 249,000,000 VND
+// Super-carry-van-thumbnail.jpg
+// CARRY VAN
 }
-// [
-//   {
-//     thumb: 'http://templatecs.com/demo/template/car/images/b-img-2.jpg',
-//     id: 111,
-//     // description
-//     name: 'HYUNDAI ELANTRA 2016 NEW MODEL',
-//     slogan: 'Nâng Tầm Phong Cách',
-//     price: 329,
-//   },
-//   {
-//     id: 112,
-//     thumb: 'http://templatecs.com/demo/template/car/images/b-img-10.jpg',
-//     name: 'FORD MUSTANG 2016 TURBO',
-//     slogan: 'Thuần chất Sedan',
-//     price: 329,
-//   },
-//   {
-//     id: 113,
-//     thumb: 'http://templatecs.com/demo/template/car/images/b-img-3.jpg',
-//     name: 'FORD MUSTANG 2016 TURBO',
-//     slogan: 'Thuần chất Sedan',
-//     price: 329,
-//   },
-//   {
-//     id: 114,
-//     thumb: 'http://templatecs.com/demo/template/car/images/b-img-4.jpg',
-//     name: 'FORD MUSTANG 2016 TURBO',
-//     slogan: 'Thuần chất Sedan',
-//     price: 329,
-//   },
-//   {
-//     id: 115,
-//     thumb: 'http://templatecs.com/demo/template/car/images/b-img-7.jpg',
-//     name: 'FORD MUSTANG 2016 TURBO',
-//     slogan: 'Thuần chất Sedan',
-//     price: 329,
-//   }
-// ];
 
 export default data;

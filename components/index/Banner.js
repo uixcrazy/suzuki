@@ -6,18 +6,19 @@ import Link from 'next/link';
 const useStyles = makeStyles(theme => ({
   banner: {
     height: '100%',
+    overflow: 'hidden',
+    paddingTop: 48,
   },
   bannerLink: {
     display: 'block',
+    height: '100%',
     position: 'relative',
     '& img': {
       display: 'block',
-      // width: '100%',
       width: '100vw',
+      height: '100%',
       objectFit: 'cover',
       objectPosition: 'center',
-      // max-width: 100%;
-      // height: 'auto',
     }
   }
 }));

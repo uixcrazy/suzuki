@@ -5,13 +5,15 @@ import Card from './Card';
 
 const Cards = ({items=[
   {
-    thumb: 'http://templatecs.com/demo/template/car/images/b-img-2.jpg',
-    name: 'FORD MUSTANG 2016 TURBO',
-    slogan: 'Thuần chất Sedan',
-    href: 'https://unsplash.com/developers',
-    price: 329,
-  }
-]
+    thumb: 'http://lvtd.96.lt/swift/swift-thumb.png',
+    id: 'swift',
+    name: 'SWIFT',
+    slogan: 'Nâng tầm phong cách',
+    price: 549,
+    priceType: 'exact', // exact | min | text
+  },
+],
+path="/xe-du-lich/suzuki/"
 }) => {
   return (
    <div className="row">
@@ -21,7 +23,7 @@ const Cards = ({items=[
             className="col-lg-4 col-md-6 col-sm-6 col-12"
             key={`${item.name}-${index}`}
           >
-            <Card item={item}/>
+            <Card item={item} path={path}/>
           </div>
         )
       })}

@@ -23,5 +23,6 @@ module.exports.parse = (urn, pathname) => {
 };
 
 module.exports.makeSlug = (string, id='') => {
-  return [removeDiacritics(string.toLowerCase()).replace(/([^\w\d]|\s)/ig, '-'), id].join('-');
+  return removeDiacritics(string.toLowerCase()).replace(/([^\w\d]|\s)/ig, '-');
+  // return [removeDiacritics(string.toLowerCase()).replace(/([^\w\d]|\s)/ig, '-'), id].join('-');
 }

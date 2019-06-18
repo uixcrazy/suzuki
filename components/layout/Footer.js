@@ -10,7 +10,8 @@ const Footer = props => {
     }}>
       <div className="container">
         <p className="copyright">
-          Copyright © 2019 SUZUKI 🚕 🚖 🚘  🌾 🌵 🌻 🦀 🍁 . All rights reserved.
+          Copyright © 2019 xetainhosaigon.com
+          <br />All rights reserved.
         </p>
         <p>Địa chỉ: 440 Nguyễn Duy Trinh, phường Bình Trưng Đông, Quận 2, Ho Chi Minh City, Vietnam</p>
       </div>

@@ -6,7 +6,7 @@ import { isMobileDetect } from "../core/mobile-detect";
 
 import LISTDATA from "../mockdata/list";
 
-export default class Oto extends React.Component {
+export default class Car extends React.Component {
   static getInitialProps = async ({ query: { id }, req }) => {
     const isMobile = isMobileDetect(req && req.headers['user-agent']);
 

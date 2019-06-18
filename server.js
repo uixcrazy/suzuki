@@ -18,8 +18,13 @@ app.prepare().then(() => {
     app.render(req, res, actualPage, req.query);
   });
 
-  server.get("/xe-oto/:slug([^/]+)-:id(\\d+)", (req, res) => {
-    const actualPage = "/oto";
+  server.get("/xe-du-lich/:slug([^/]+)", (req, res) => {
+    const actualPage = "/car";
+    const queryParams = { id: req.params.id, slug: req.params.slug };
+    app.render(req, res, actualPage, queryParams);
+  });
+  server.get("/xe-tai-nho/:slug([^/]+)", (req, res) => {
+    const actualPage = "/carry";
     const queryParams = { id: req.params.id, slug: req.params.slug };
     app.render(req, res, actualPage, queryParams);
   });

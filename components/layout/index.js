@@ -6,6 +6,8 @@ import Container from '@material-ui/core/Container';
 import HeaderDefault from './Header';
 import FooterDefault from './Footer';
 
+import '../../core/css/style.scss';
+
 const useStyles = makeStyles(theme => ({
   main: {
     paddingTop: 35,

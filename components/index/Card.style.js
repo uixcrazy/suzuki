@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     display: 'block',
     overflow: 'hidden',
+    background: '#fff',
     '&:hover img': {
       transform: 'scale(1.08)',
     },

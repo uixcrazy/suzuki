@@ -51,6 +51,25 @@ ul {
   user-select: none;
 }
 
+.h2 {
+  display: block;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 24px;
+  line-height: 50px;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+  .mb {
+    font-size: 18px;
+  }
+  span {
+    color: #0b3145;
+  }
+}
+
+
+
 // LOCAL LAYOUT
 // #__next {
 //   overflow: hidden;

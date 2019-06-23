@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
+import { makePath } from '../../core/makePath';
+import { CDN_URL } from  '../constants';
 
 const useStyles = makeStyles(theme => ({
   banner: {
@@ -23,29 +25,29 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const path = "/xe-du-lich/suzuki/";
+const bannerItem = {
+  id: 'ertiga',
+  thumb: 'ertiga/ertiga-thumb.jpg',
+  thumbMb: 'ertiga/ertiga-thumb-mb.jpg',
+  name: 'Ertiga 2019',
+}
+
 const Banner = props => {
   const classes = useStyles();
   return (
     <div className={classes.banner}>
-      {props.isMobile
-      ? <Link href="www.google.com">
+      <Link
+        as={`${path}${makePath(bannerItem.id)}`}
+        href={`${path}${makePath(bannerItem.id)}`}
+      >
         <a className={classes.bannerLink}>
           <img
-            src="https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
-            alt="suzuki nguyen duy trinh"
+            src={`${CDN_URL}${props.isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}
+            alt={bannerItem.name}
           />
         </a>
       </Link>
-    : <Link href="wwww.google.com">
-      <a className={classes.bannerLink}>
-        <img
-          src="https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
-          alt="suzuki nguyen duy trinh"
-        />
-      </a>
-    </Link>
-    }
-
     </div>
   );
 };

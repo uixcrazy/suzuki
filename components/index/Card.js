@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import useStyles from './Card.style';
 import { makePath } from '../../core/makePath';
+import { CDN_URL } from  '../constants';
 
 const Card = ({
   item = {
@@ -23,7 +24,7 @@ const Card = ({
       >
         <a className={classes.productImgWrapper}>
           <img className={classes.productImg}
-            src={item.thumb}
+            src={`${CDN_URL}${item.thumb}`}
             alt={item.name}
             />
         </a>

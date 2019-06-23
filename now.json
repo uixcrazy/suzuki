@@ -2,6 +2,7 @@
   "version": 2,
   "name": "suzuki",
   "builds": [
-      { "src": "next.config.js", "use": "@now/next" }
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "server.js", "use": "@now/node-server" }
   ]
 }

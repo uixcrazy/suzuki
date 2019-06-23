@@ -14,7 +14,7 @@ class MyDocument extends Document {
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
           {/* PWA primary color */}
-          <meta name="theme-color" content={"#0b3145"} />
+          <meta name="theme-color" content={"#fff"} />
         </Head>
         <body>
           <Main />

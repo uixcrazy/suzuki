@@ -1,7 +1,7 @@
 import React from 'react';
-import useStyles from './Card.style';
-import { makeSlug } from '../../path-map';
 import Link from 'next/link';
+import useStyles from './Card.style';
+import { makePath } from '../../core/makePath';
 
 const Card = ({
   item = {
@@ -18,8 +18,8 @@ const Card = ({
   return (
     <div className={classes.productItem}>
       <Link
-        as={`${path}${makeSlug(item.id)}`}
-        href={`${path}${makeSlug(item.id)}`}
+        as={`${path}${makePath(item.id)}`}
+        href={`${path}${makePath(item.id)}`}
       >
         <a className={classes.productImgWrapper}>
           <img className={classes.productImg}
@@ -33,8 +33,8 @@ const Card = ({
         <div className={classes.left}>
           <h3 className={classes.productName}>
             <Link
-              as={`${path}${makeSlug(item.id)}`}
-              href={`${path}${makeSlug(item.id)}`}
+              as={`${path}${makePath(item.id)}`}
+              href={`${path}${makePath(item.id)}`}
             >
               <a>{item.name}</a>
             </Link>

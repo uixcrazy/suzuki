@@ -27,6 +27,29 @@ npm run dev
 
 https://material-ui.com/getting-started/page-layout-examples/blog/
 
+## Update configs
+
+  - [now](https://zeit.co/docs/v2/deployments/configuration/?query=config)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## layout ::: B! 1: Layout Custom
 

@@ -2,19 +2,28 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   topNav: {
-    position: 'absolute',
-    left: '0',
-    top: '0',
+    position: 'relative',
     width: '100%',
-    zIndex: '30',
     height: 48,
     lineHeight: '48px',
     color: '#fff',
     background: 'var(--secondary)', // #0b3145
+    '& .container': {
+      height: '100%',
+    }
   },
   topNavCt: {
     display: 'flex',
-    justifyContent: 'space-between',
+    height: '100%',
+  },
+  homelink: {
+    display: 'inline-flex',
+    width: 150,
+    borderRight: '1px solid rgba(255, 255, 255, 0.2)',
+    marginRight: 10,
+  },
+  logoImage: {
+    height: '100%',
   },
   iconLocation: {
     fontSize: '1rem',

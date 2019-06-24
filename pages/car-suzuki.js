@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import Cards from "../components/index/Cards";
-import Header from "../components/oto/Header";
 import { isMobileDetect } from "../core/mobile-detect";
 
 import LISTDATA from "../mockdata/list";
@@ -24,7 +23,6 @@ export default class Car extends React.Component {
       <Layout
         title='xe ô tô suzuki celerio - THUẦN CHẤT SEDAN | Nguyễn Duy Trinh, TPHCM '
         isMobile={this.props.isMobile}
-        Header={Header}
       >
         {this.props.id}
         <br />

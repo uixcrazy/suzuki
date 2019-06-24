@@ -86,6 +86,8 @@ class Index extends Component {
 
     const { boxActive } = this.state;
 
+    // page-banner
+
     return (
       <StickyContainer
         style={{

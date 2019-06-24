@@ -5,12 +5,11 @@ import Card from './Card';
 
 const Cards = ({items=[
   {
-    thumb: 'http://lvtd.96.lt/swift/swift-thumb.png',
     id: 'swift',
     name: 'SWIFT',
     slogan: 'Nâng tầm phong cách',
     price: 549,
-    priceType: 'exact', // exact | min | text
+    thumbnail: 'swift/swift-thumb.png',
   },
 ],
 path="/xe-du-lich/suzuki/"

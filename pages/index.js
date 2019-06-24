@@ -43,20 +43,20 @@ export default class Index extends React.Component {
         <main style={{margin: '15px 0'}}>
           <div className="container">
             <h2 className={`h2 ${isMobile ? "mb" :''}`}>
-              Các dòng xe du lịch của <span>Suzuki</span>
-            </h2>
-            <Cards
-              isMobile={isMobile}
-              items={data["xe-du-lich"]}
-              path="/xe-du-lich/suzuki/"
-            />
-            <h2 className={`h2 ${isMobile ? "mb" :''}`}>
               Các dòng xe tải nhỏ / xe thương mại của <span>Suzuki</span>
             </h2>
             <Cards
               isMobile={isMobile}
               items={data["xe-tai-nho"]}
               path="/xe-tai-nho/suzuki/"
+            />
+            <h2 className={`h2 ${isMobile ? "mb" :''}`}>
+              Các dòng xe du lịch của <span>Suzuki</span>
+            </h2>
+            <Cards
+              isMobile={isMobile}
+              items={data["xe-du-lich"]}
+              path="/xe-du-lich/suzuki/"
             />
           </div>
         </main>

@@ -78,11 +78,6 @@ const useStyles = makeStyles(theme => ({
       borderBottomColor: 'rgba(0,0,0,0)',
     },
   },
-
-  // https://mdbootstrap.com/docs/react/components/demo/
-  // https://unsplash.com/developers
-
-  // https://bkdemos.ml/carrental/
 }));
 
 export default useStyles;

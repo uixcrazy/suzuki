@@ -1,13 +1,14 @@
 {
   "version": 2,
   "name": "suzuki",
-  "alias": "xetainhosaigon.com",
+  "alias": ["xetainhosaigon.com"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
     { "src": "server.js", "use": "@now/node-server" }
   ],
   "github": {
-    "enabled": false,
+    "enabled": true,
+    "autoAlias": true,
     "silent": true
   }
 }

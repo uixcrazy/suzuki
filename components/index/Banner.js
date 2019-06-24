@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 import { makePath } from '../../core/makePath';
@@ -9,7 +8,6 @@ const useStyles = makeStyles(theme => ({
   banner: {
     height: '100%',
     overflow: 'hidden',
-    paddingTop: 48,
   },
   bannerLink: {
     display: 'block',
@@ -50,10 +48,6 @@ const Banner = props => {
       </Link>
     </div>
   );
-};
-
-Banner.propTypes = {
-
 };
 
 export default Banner;

@@ -47,6 +47,14 @@
   }
 }
 
+/* uixcrazy -- start */
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1270px;
+  }
+}
+/* uixcrazy -- end */
+
 .container-fluid {
   width: 100%;
   padding-right: 15px;

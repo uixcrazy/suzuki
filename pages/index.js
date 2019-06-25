@@ -48,7 +48,7 @@ export default class Index extends React.Component {
             <Cards
               isMobile={isMobile}
               items={data["xe-tai-nho"]}
-              path="/xe-tai-nho/suzuki/"
+              path="/xe-tai-nho-suzuki/"
             />
             <h2 className={`h2 ${isMobile ? "mb" :''}`}>
               Các dòng xe du lịch của <span>Suzuki</span>
@@ -56,7 +56,7 @@ export default class Index extends React.Component {
             <Cards
               isMobile={isMobile}
               items={data["xe-du-lich"]}
-              path="/xe-du-lich/suzuki/"
+              path="/xe-du-lich-suzuki/"
             />
           </div>
         </main>

@@ -12,7 +12,7 @@ const Cards = ({items=[
     thumbnail: 'swift/swift-thumb.png',
   },
 ],
-path="/xe-du-lich/suzuki/"
+path="/xe-du-lich-suzuki/"
 }) => {
   return (
    <div className="row">

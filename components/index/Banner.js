@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { makePath } from '../../core/makePath';
 import { CDN_URL } from  '../constants';
 
-const path = "/xe-du-lich/suzuki/";
+const path = "/xe-du-lich-suzuki/";
 const bannerItem = {
   id: 'ertiga',
   thumb: 'ertiga/ertiga-thumb.jpg',

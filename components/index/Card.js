@@ -14,7 +14,7 @@ const Card = ({
     price: 549,
     thumbnail: 'swift/swift-thumb.png',
   },
-  path = "/xe-du-lich/suzuki/",
+  path = "/xe-du-lich-suzuki/",
 }) => {
   return (
     <div className={classes.productItem}>

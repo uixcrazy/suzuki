@@ -16,7 +16,7 @@ const Header = ({classes, isMobile}) => {
               <a href="/"><span>Xe tải nhỏ Suzuki</span></a>
             </li>
             <li>
-              <a href="/xe-tai-nho/suzuki/blind-van">
+              <a href="/xe-tai-nho-suzuki/blind-van">
                 <span>Blind Van</span>
               </a>
             </li>

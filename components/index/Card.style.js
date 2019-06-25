@@ -1,6 +1,5 @@
-import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+export default {
   productItem: {
     padding: '12px',
     background: '#f5f5f5',
@@ -78,6 +77,4 @@ const useStyles = makeStyles(theme => ({
       borderBottomColor: 'rgba(0,0,0,0)',
     },
   },
-}));
-
-export default useStyles;
+};

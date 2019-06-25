@@ -3,12 +3,11 @@ import PlaceIcon from '@material-ui/icons/Place';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Link from 'next/link';
-import useStyles from './TopMenu.style';
-
+import withStyles from 'react-jss';
+import styles from './TopMenu.style';
 import { HOTLINE, MAIL } from '../constants';
 
-const TopMenu = props => {
-  const classes = useStyles();
+const TopMenu = ({classes, isMobile}) => {
   return (
     <div className={classes.topNav}>
       <div className="container">
@@ -22,7 +21,7 @@ const TopMenu = props => {
               />
             </a>
           </Link>
-          {props.isMobile
+          {isMobile
           ? <ul className={classes.contactDetails}>
             <li className="phone mb">
               <PhoneIcon
@@ -71,4 +70,4 @@ const TopMenu = props => {
   );
 };
 
-export default TopMenu;
+export default withStyles(styles)(TopMenu);

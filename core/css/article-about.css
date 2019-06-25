@@ -5,13 +5,14 @@
 .article-about section {
   margin-top: 20px;
 }
-.article-about-h1 {
+.article-about-heading {
   font-size: 16px;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 .article-about-title {
   font-weight: bold;
+  font-size: inherit;
 }
 .article-about-img-fluid {
   max-width: 100%;
@@ -22,12 +23,14 @@
 .aa-img-full {
   width: 100%;
 }
+
 .txt-center {
   text-align: center;
 }
 .aa-lis01 {
   list-style: none;
 }
+
 .mt-10 {
   margin-top: 10px;
 }

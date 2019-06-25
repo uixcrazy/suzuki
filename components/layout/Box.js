@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from 'react-jss';
 
 const Box = ({style = {}, classes, header, children, isCurrent, isMobile}) => (
   <div className={[classes.box,
@@ -11,7 +11,7 @@ const Box = ({style = {}, classes, header, children, isCurrent, isMobile}) => (
   </div>
 )
 
-const styles = theme => ({
+const styles = {
   box: {
     // '&.isCurrent': { },
     '& .boxHeader': {
@@ -51,6 +51,6 @@ const styles = theme => ({
     justifyContent: 'space-between',
     padding: '1.25rem',
   },
-});
+};
 
 export default withStyles(styles)(Box);

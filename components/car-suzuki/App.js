@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from 'react-jss';
 import { Element, scroller } from 'react-scroll';
 import _debounce from "lodash.debounce";
 import MobileDetect from 'mobile-detect';

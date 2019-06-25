@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import useStyles from './Card.style';
+import withStyles from 'react-jss';
+import styles from './Card.style';
 import { makePath } from '../../core/makePath';
 import { CDN_URL } from  '../constants';
 
 const Card = ({
+  classes,
   item = {
     id: 'swift',
     name: 'SWIFT',
@@ -12,9 +14,8 @@ const Card = ({
     price: 549,
     thumbnail: 'swift/swift-thumb.png',
   },
-  path = "/xe-du-lich/suzuki/"
+  path = "/xe-du-lich/suzuki/",
 }) => {
-  const classes = useStyles();
   return (
     <div className={classes.productItem}>
       <Link
@@ -47,4 +48,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default withStyles(styles)(Card);

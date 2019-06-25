@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import _debounce from "lodash.debounce";
-import { withStyles } from '@material-ui/styles';
+import withStyles from 'react-jss';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { Element, scroller } from 'react-scroll';
 

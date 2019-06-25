@@ -1,6 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
+const styles =  {
   topNav: {
     position: 'relative',
     width: '100%',
@@ -70,6 +68,6 @@ const useStyles = makeStyles(theme => ({
     }
     // color: '#B1BCC2'
   },
-}));
+};
 
-export default useStyles;
+export default styles;

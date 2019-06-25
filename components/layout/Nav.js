@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import injectSheet from 'react-jss';
 
 export class Nav extends React.Component {
   render() {
@@ -33,7 +33,7 @@ export class Nav extends React.Component {
   }
 }
 
-const styles = theme => ({
+const styles = {
   sidenav: {
     display: 'flex',
     background: 'var(--secondary)',
@@ -73,11 +73,6 @@ const styles = theme => ({
       cursor: 'default',
     },
   },
-  [`@media (max-width: ${theme.breakpointLg})`]: {
-    sidenav: {
-      fontSize: '0.875rem',
-    }
-  },
-});
+};
 
-export default withStyles(styles)(Nav);
+export default injectSheet(styles)(Nav);

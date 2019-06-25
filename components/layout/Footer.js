@@ -1,5 +1,4 @@
 import React from 'react';
-import PlaceIcon from '@material-ui/icons/Place';
 
 const Footer = props => {
   return (

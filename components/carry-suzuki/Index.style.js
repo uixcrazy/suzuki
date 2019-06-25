@@ -1,6 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
-
-const styles =theme => ({
+export default {
   main: {
     height: '100%',
     // marginTop: 'var(--height-header)',
@@ -9,6 +7,4 @@ const styles =theme => ({
     position: 'relative',
     zIndex: '1',
   },
-});
-
-export default styles;
+}

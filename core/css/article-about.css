@@ -1,0 +1,74 @@
+.article-about {
+  color: #555;
+  font-size: 14px;
+}
+.article-about section {
+  margin-top: 20px;
+}
+.article-about-h1 {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.article-about-title {
+  font-weight: bold;
+}
+.article-about-img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.aa-img-full {
+  width: 100%;
+}
+.txt-center {
+  text-align: center;
+}
+.aa-lis01 {
+  list-style: none;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+
+/* SPECIFICATIONS */
+
+.grid_thongso .node_thongso .node_title {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0b3145;
+  background-color: #e2e5e8;
+}
+.grid_thongso .node_thongso .node_title span {
+  position: relative;
+  padding-left: 10px;
+}
+.clear {
+  clear: both;
+  font-size: 0px;
+  line-height: 0px;
+  height: 0;
+}
+.div_table {
+  width: 100%;
+}
+.div_table .row_table {
+  border-bottom: 1px solid #EDEDED;
+}
+.div_table .row_table:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.div_table .row_table .row_left {
+  float: left;
+  padding: 10px 15px;
+  width: 30%;
+}
+.div_table .row_table .row_right {
+  float: right;
+  padding: 10px 15px;
+  width: 70%;
+}

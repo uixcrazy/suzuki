@@ -1,4 +1,5 @@
 import React from 'react';
+import PlaceIcon from '@material-ui/icons/Place';
 
 const Footer = props => {
   return (
@@ -13,7 +14,7 @@ const Footer = props => {
           Copyright © 2019 xetainhosaigon.com. All rights reserved.
         </small>
         <div>
-          <small>Địa chỉ: 440 Nguyễn Duy Trinh, phường Bình Trưng Đông, Quận 2, Ho Chi Minh City, Vietnam</small>
+          <small>Suzuki Đại Việt - 440 Nguyễn Duy Trinh, phường Bình Trưng Đông, Quận 2, Ho Chi Minh City, Vietnam</small>
         </div>
       </div>
     </footer>

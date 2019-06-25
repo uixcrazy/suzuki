@@ -9,7 +9,7 @@ import { Element, scroller } from 'react-scroll';
 import Nav from '../layout/Nav';
 import Box from '../layout/Box';
 import About from './About';
-import Design from './Design';
+import Specification from './Specification';
 
 import styles from './Index.style';
 
@@ -19,11 +19,11 @@ const dataNavigation = [
     name: "Về ...",
   },
   {
-    scrollName: "design",
-    name: "Thiết kế",
+    scrollName: "specification",
+    name: "Thông số kỹ thuật",
   },
 ];
-const listCps = [About, Design ];
+const listCps = [About, Specification ];
 const data = dataNavigation.map((item, index) => {
   return ({
     id: item.scrollName,

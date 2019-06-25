@@ -4,7 +4,7 @@ const data = {
   "xe-du-lich": [
     {
       id: 'swift',
-      name: 'SWIFT',
+      name: 'Swift',
       slogan: 'Nâng tầm phong cách',
       price: 549,
       thumbnail: 'swift/swift-thumb.jpg',

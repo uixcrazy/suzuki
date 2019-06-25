@@ -1,6 +1,5 @@
 import React from 'react';
 import PlaceIcon from '@material-ui/icons/Place';
-
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Link from 'next/link';

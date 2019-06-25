@@ -1,75 +1,83 @@
-
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Link from '@material-ui/core/Link';
-import NextLink from 'next/link';
+import { withStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
-  toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto',
-  },
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-    color: 'rgba(0, 0, 0, 0.87)',
-    textDecoration: 'none',
-  },
-}));
+export class Nav extends React.Component {
+  render() {
+    const {
+      style,
+      classes,
+      boxActive = "about",
+      navList = [
+        {name: "About", scrollName: "about"},
+        {name: "Services", scrollName: "services"},
+        {name: "Clients", scrollName: "clients"},
+        {name: "Contact", scrollName: "contact"},
+      ],
+      updateBoxActive = () => {console.log("click to sidebar!!!")},
+    } = this.props;
+    return (
+      <div style={style}>
+        <ul className={classes.sidenav}>
+          {navList.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => updateBoxActive(item.scrollName)}
+              className={[classes.item, boxActive === item.scrollName ? 'active' : ''].join(' ')}
+            >
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+}
 
-const sections = [
-  {
-    href: '/Technology',
-    label: 'Technology',
+const styles = theme => ({
+  sidenav: {
+    display: 'flex',
+    background: 'var(--secondary)',
+    color: '#fff',
+    position: 'relative',
   },
-  {
-    href: '/Design',
-    label: 'Design',
+  item: {
+    position: 'relative',
+    lineHeight: '60px',
+    margin: '0.25rem 1.25rem 0',
+    '& button': {
+      padding: '1rem 0',
+    },
+    '&:after, &:before': {
+      content: '" "',
+      position: 'absolute',
+      height: '1px',
+      width: '0',
+      transition: 'all 0.3s ease',
+    },
+    '&:before': {
+      top: '16px',
+      left: '0',
+    },
+    '&:after': {
+      bottom: '18px',
+      right: '0',
+    },
+    '&.active, &:hover:not(.active)': {
+      color: 'var(--color-secondary)',
+      '&:before, &:after': {
+        backgroundColor: 'var(--color-secondary)',
+        width: 'calc(100% - 10px)',
+      },
+    },
+    '&.active button': {
+      cursor: 'default',
+    },
   },
-  {
-    href: '/Business',
-    label: 'Business',
+  [`@media (max-width: ${theme.breakpointLg})`]: {
+    sidenav: {
+      fontSize: '0.875rem',
+    }
   },
-  {
-    href: '/Culture',
-    label: 'Culture',
-  },
-  {
-    href: '/Politics',
-    label: 'Politics',
-  },
-  {
-    href: '/Health',
-    label: 'Health',
-  },
-  {
-    href: '/Travel',
-    label: 'Travel',
-  },
-];
+});
 
-const Nav = props => {
-  const classes = useStyles();
-  return (
-    <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-      {sections.map(section => (
-        <Link
-          color="inherit"
-          noWrap
-          key={section}
-          variant="body2"
-          component={NextLink}
-        >
-          <NextLink href={section.href}>
-            <a className={classes.toolbarLink}>
-              {section.label}
-            </a>
-          </NextLink>
-        </Link>
-      ))}
-    </Toolbar>
-  );
-};
-
-export default Nav;
+export default withStyles(styles)(Nav);

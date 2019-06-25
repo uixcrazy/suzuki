@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 
 export default class MyApp extends App {
   componentDidMount () {

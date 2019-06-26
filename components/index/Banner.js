@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { CDN_URL } from  '../constants';
 
 const path = "/xe-du-lich-suzuki/";
-const pathPage = "/car-suzuki";
 const bannerItem = {
   id: 'ertiga',
   thumb: 'ertiga/ertiga-thumb.jpg',
@@ -15,7 +14,7 @@ const bannerItem = {
 const Banner = ({classes, isMobile}) => {
   return (
     <div className={classes.banner}>
-      <Link as={`${path}${bannerItem.id}`} href={`${pathPage}?id=${bannerItem.id}`}>
+      <Link as={`${path}${bannerItem.id}`}>
         <a className={classes.bannerLink}>
           <img
             src={`${CDN_URL}${isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}

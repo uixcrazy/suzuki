@@ -49,7 +49,6 @@ export default class Index extends React.Component {
               isMobile={isMobile}
               items={data["xe-tai-nho"]}
               path="/xe-tai-nho-suzuki/"
-              pathPage="/carry-suzuki"
             />
             <h2 className={`h2 ${isMobile ? "mb" :''}`}>
               Các dòng xe du lịch của <span>Suzuki</span>
@@ -58,7 +57,6 @@ export default class Index extends React.Component {
               isMobile={isMobile}
               items={data["xe-du-lich"]}
               path="/xe-du-lich-suzuki/"
-              pathPage="/car-suzuki"
             />
           </div>
         </main>

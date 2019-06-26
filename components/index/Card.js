@@ -4,10 +4,6 @@ import withStyles from 'react-jss';
 import styles from './Card.style';
 import { CDN_URL } from  '../constants';
 
-// <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-//  <a>{props.title}</a>
-// </Link>
-
 const Card = ({
   classes,
   item = {
@@ -18,11 +14,10 @@ const Card = ({
     thumbnail: 'swift/swift-thumb.png',
   },
   path = "/xe-du-lich-suzuki/",
-  pathPage = "/car-suzuki"
 }) => {
   return (
     <div className={classes.productItem}>
-      <Link as={`${path}${item.id}`} href={`${pathPage}?id=${item.id}`}>
+      <Link as={`${path}${item.id}`} >
         <a className={classes.productImgWrapper}>
           <img className={classes.productImg}
             src={`${CDN_URL}${item.thumbnail}`}
@@ -34,7 +29,7 @@ const Card = ({
       <div className={classes.productDesc}>
         <div className={classes.left}>
           <h3 className={classes.productName}>
-            <Link as={`${path}${item.id}`} href={`${pathPage}?id=${item.id}`}>
+            <Link as={`${path}${item.id}`}>
               <a>{item.name}</a>
             </Link>
           </h3>

@@ -17,20 +17,12 @@ app.prepare().then(() => {
     return app.render(req, res, '/index', req.query)
   })
 
-  server.get('/xe-tai-nho-suzuki', (req, res) => {
-    return app.render(req, res, '/carry-suzuki-list', req.query)
-  })
-
-  server.get('/xe-du-lich-suzuki', (req, res) => {
-    return app.render(req, res, '/car-suzuki-list', req.query)
-  })
-
   server.get('/xe-tai-nho-suzuki/:id', (req, res) => {
     app.render(req, res,  '/carry-suzuki', { id: req.params.id });
   });
 
   server.get("/xe-du-lich-suzuki/:id", (req, res) => {
-    app.render(req, res, '/carry-suzuki', { id: req.params.id });
+    app.render(req, res, '/car-suzuki', { id: req.params.id });
   });
 
   server.use(handle);

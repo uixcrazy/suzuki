@@ -6,12 +6,6 @@
     { "src": "next.config.js", "use": "@now/next" },
     { "src": "server.js", "use": "@now/node-server" }
   ],
-  "routes": [
-    {
-      "src": "^/xe-tai-nho-suzuki/(.*)",
-      "dest": "/server.js"
-    }
-  ],
   "github": {
     "enabled": true,
     "autoAlias": true,

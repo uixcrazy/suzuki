@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const next = require('next');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -13,21 +13,16 @@ app.prepare().then(() => {
   //   return handle(req, res)
   // })
 
-  server.get("/", (req, res) => {
-    const actualPage = "/index";
-    app.render(req, res, actualPage, req.query);
-  });
+  server.get('/', (req, res) => {
+    return app.render(req, res, '/index', req.query)
+  })
 
   server.get('/xe-tai-nho-suzuki/:id', (req, res) => {
-    const actualPage = '/carry-suzuki';
-    const queryParams = { id: req.params.id };
-    app.render(req, res, actualPage, queryParams);
+    app.render(req, res,  '/carry-suzuki', { id: req.params.id });
   });
 
   server.get("/xe-du-lich-suzuki/:id", (req, res) => {
-    const actualPage = "/car-suzuki";
-    const queryParams = { id: req.params.id };
-    app.render(req, res, actualPage, queryParams);
+    app.render(req, res, '/car-suzuki', { id: req.params.id });
   });
 
   server.use(handle);

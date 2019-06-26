@@ -8,6 +8,6 @@ const plugins =  withSass(withImages({
 }));
 
 module.exports = {
-  // target: 'serverless',
+  target: 'serverless',
   ...plugins,
 }

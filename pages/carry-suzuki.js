@@ -5,7 +5,7 @@ import Header from "../components/carry-suzuki/Header";
 
 import LISTDATA from "../mockdata/list";
 
-export default class Carry extends React.Component {
+export default class CarrySuzuki extends React.Component {
   static getInitialProps = async ({ query: { id }, req }) => {
     const isMobile = isMobileDetect(req && req.headers['user-agent']);
 
@@ -25,7 +25,7 @@ export default class Carry extends React.Component {
         isMobile={this.props.isMobile}
         Header={Header}
       >
-        {this.props.id}
+        {this.props.slug}
         <br />
         {this.props.isMobile}
       </Layout>

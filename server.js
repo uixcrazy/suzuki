@@ -1,10 +1,10 @@
 const express = require('express')
-const next = require('next')
+const next = require('next');
 
-const port = parseInt(process.env.PORT, 10) || 3000
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express()
@@ -18,14 +18,15 @@ app.prepare().then(() => {
     app.render(req, res, actualPage, req.query);
   });
 
-  server.get("/xe-du-lich-suzuki/:slug([^/]+)", (req, res) => {
-    const actualPage = "/car-suzuki";
-    const queryParams = { id: req.params.id, slug: req.params.slug };
+  server.get('/xe-tai-nho-suzuki/:id', (req, res) => {
+    const actualPage = '/carry-suzuki';
+    const queryParams = { id: req.params.id };
     app.render(req, res, actualPage, queryParams);
   });
-  server.get("/xe-tai-nho-suzuki/:slug([^/]+)", (req, res) => {
-    const actualPage = "/carry-suzuki";
-    const queryParams = { id: req.params.id, slug: req.params.slug };
+
+  server.get("/xe-du-lich-suzuki/:id", (req, res) => {
+    const actualPage = "/car-suzuki";
+    const queryParams = { id: req.params.id };
     app.render(req, res, actualPage, queryParams);
   });
 

@@ -34,7 +34,6 @@ export default class CarSuzukiList extends React.Component {
             <Cards
               isMobile={isMobile}
               items={data["xe-du-lich"]}
-              path="/xe-du-lich-suzuki/"
             />
           </div>
         </main>

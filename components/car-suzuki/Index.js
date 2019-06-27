@@ -6,8 +6,8 @@ import withStyles from 'react-jss';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { Element, scroller } from 'react-scroll';
 
-import Nav from '../layout/Nav';
-import Box from '../layout/Box';
+import Nav from '../layout/NavSecondary';
+import Box from './Box';
 import About from './About';
 import Design from './Design';
 

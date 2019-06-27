@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import withStyles from 'react-jss';
 import styles from './TopMenu.style';
-import { HOTLINE, MAIL } from '../constants';
+import { HOTLINE, MAIL } from '../../core/constants';
 
 const TopMenu = ({classes, isMobile}) => {
   return (
@@ -24,39 +24,21 @@ const TopMenu = ({classes, isMobile}) => {
           {isMobile
           ? <ul className={classes.contactDetails}>
             <li className="phone mb">
-              {/* <PhoneIcon
-                classes={{
-                  root: classes.iconCall,
-                }}/> */}
-              Tư vấn:
+              Tư vấn:&nbsp;
               <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
             </li>
           </ul>
           : <ul className={classes.contactDetails}>
               <li className="address">
-                <address>
-                  {/* <PlaceIcon
-                    classes={{
-                      root: classes.iconLocation,
-                    }}/> */}
-                  440, Nguyễn Duy Trinh, Bình Trưng Đông, Quận 2, HCM
-                </address>
+                <address>440, Nguyễn Duy Trinh, Bình Trưng Đông, Quận 2, HCM</address>
               </li>
               <li className="phone">
-                {/* <PhoneIcon
-                  classes={{
-                    root: classes.iconCall,
-                  }}/> */}
+                Tư vấn:&nbsp;
                 <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
               </li>
               <li className="mail">
-                {/* <MailIcon
-                  classes={{
-                    root: classes.iconMail,
-                  }}/> */}
-                <a href={`mailto:${MAIL}`}>
-                  {MAIL}
-                </a>
+                Email:&nbsp;
+                <a href={`mailto:${MAIL}`}>{MAIL}</a>
               </li>
             </ul>
           }

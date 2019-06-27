@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "clsx": "latest",
     "cross-env": "^5.2.0",
     "express": "^4.17.1",
     "from": "^0.1.7",
     "import": "^0.0.6",
+    "isomorphic-unfetch": "^3.0.0",
     "lodash.debounce": "^4.0.8",
     "mobile-detect": "^1.4.3",
     "nested": "^0.0.1-pre2",

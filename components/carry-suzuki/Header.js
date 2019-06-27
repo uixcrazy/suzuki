@@ -1,10 +1,11 @@
 import React from 'react';
 import withStyles from 'react-jss';
 import TopMenu from '../layout/TopMenu';
+import { BREADCRUMB, PATH } from '../../core/constants';
 
-const Header = ({classes, isMobile}) => {
+const Header = ({classes, isMobile, data}) => {
   return (
-    <header className={classes.header}>
+    <div className={classes.header}>
       <TopMenu isMobile={isMobile} />
       <div className={classes.breadcrumb}>
         <div className="container">
@@ -13,11 +14,11 @@ const Header = ({classes, isMobile}) => {
               <a href="/"><span>Trang chủ</span></a>
             </li>
             <li>
-              <a href="/xe-tai-nho-suzuki"><span>Xe tải nhỏ Suzuki</span></a>
+              <a href={PATH[data.cat_id]}><span>{BREADCRUMB[data.cat_id]}</span></a>
             </li>
             <li>
-              <a href="/xe-tai-nho-suzuki/blind-van">
-                <span>Blind Van</span>
+              <a href={`${PATH[data.cat_id]}/${data.cat_id}`}>
+                <span>{data.name}</span>
               </a>
             </li>
           </ul>
@@ -26,20 +27,23 @@ const Header = ({classes, isMobile}) => {
 
       <div className={classes.productName}>
         <div className="container">
-          <h1 className={classes.title}>Suzuki Blind Van</h1>
-          <p className={classes.slogan}>Kinh tế - Hiệu quả - Bền Bỉ</p>
+          <h1 className={classes.title}>{data.name_vi || data.name}</h1>
+          <p className={classes.slogan}>{data.slogan}</p>
         </div>
       </div>
+      {/* // page-banner */}
 
-    </header>
+    </div>
   );
 };
 
 const styles = {
   mb: {},
   header: {
-    boxShadow: '0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)',
+    // boxShadow: '0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)',
     position: 'relative',
+    marginTop: 15,
+    marginBottom: 10
   },
   breadcrumb: {
     backgroundColor: '#efefef',
@@ -71,7 +75,7 @@ const styles = {
     },
   },
   productName: {
-    marginTop: 20,
+    // marginTop: 15,
   },
   title: {
     color: 'var(--secondary)',

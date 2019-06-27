@@ -1,38 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import _debounce from "lodash.debounce";
-import withStyles from 'react-jss';
+import _debounce from 'lodash.debounce';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { Element, scroller } from 'react-scroll';
 
-import Nav from '../layout/Nav';
-import Box from '../layout/Box';
-import About from './About';
-import Specification from './Specification';
+import NavSecondary from '../layout/NavSecondary';
+import Article from './Article';
 
-import styles from './Index.style';
-
-const dataNavigation = [
-  {
-    scrollName: "about",
-    name: "Về ...",
-  },
-  {
-    scrollName: "specification",
-    name: "Thông số kỹ thuật",
-  },
-];
-const listCps = [About, Specification ];
-const data = dataNavigation.map((item, index) => {
-  return ({
-    id: item.scrollName,
-    name: item.name,
-    component: listCps[index],
-  })
-})
-
-class Index extends Component {
+export default class Index extends React.Component {
   router = {};
 
   state = {
@@ -73,7 +49,7 @@ class Index extends Component {
       delay: 0,
       smooth: 'easeOutQuad',
       // containerId: 'scroll-container',
-      // offset: -5,
+      offset: -45,
     })
     this.setState({boxActive});
   }
@@ -81,47 +57,49 @@ class Index extends Component {
   render() {
     const {
       isMobile,
-      classes,
+      data,
     } = this.props;
-
     const { boxActive } = this.state;
 
-    // page-banner
+    const dataNavigation = [
+      {
+        id: "about",
+        name: `Về ${data.name}`,
+        component: Article,
+      },
+      {
+        id: "specifications",
+        name: "Thông số kỹ thuật",
+        component: Article,
+      },
+    ];
 
     return (
-      <StickyContainer
-        style={{
-          height: '1500px',
-          background: '#ddd',
-        }}
-      >
+      <StickyContainer>
         <Sticky>
           {({ style }) => (
-            <Nav
+            <NavSecondary
               style={{...style,...{zIndex: 10}}}
               boxActive={boxActive}
-              navList={dataNavigation}
+              navList={dataNavigation.map(item=>({scrollName: item.id, name: item.name}))}
               updateBoxActive={this.updateBoxActive}
             />
           )}
         </Sticky>
-
         <div
           id="scroll-container"
           ref={DOM => this.main = DOM}
-          className={[classes.main, isMobile ? "isMobile" : "", "scroll-vertical"].join(" ")}
+          className={[isMobile ? "isMobile" : "", "scroll-vertical"].join(" ")}
           >
-          {data.map(box => {
-            const BoxContent = box.component;
+          {dataNavigation.map(box => {
+            const Content = box.component;
             return (
               <Element
                 name={box.id}
                 key={box.id}
                 ref={DOM => this.router[box.id] = DOM}>
                 <div className="container">
-                  <Box isCurrent={box.id === boxActive} isMobile={isMobile}>
-                    <BoxContent isMobile={isMobile}/>
-                  </Box>
+                  <Content isMobile={isMobile} data={data[box.id]}/>
                 </div>
               </Element>
             )
@@ -139,5 +117,3 @@ Index.propTypes = {
 Index.defaultProps = {
   isMobile: false,
 }
-
-export default withStyles(styles)(Index);

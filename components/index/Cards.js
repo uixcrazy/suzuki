@@ -7,10 +7,10 @@ const Cards = ({items=[
     name: 'SWIFT',
     slogan: 'Nâng tầm phong cách',
     price: 549,
+    cat_id: "xe-du-lich",
     thumbnail: 'swift/swift-thumb.png',
   },
 ],
-path="/xe-du-lich-suzuki/"
 }) => {
   return (
    <div className="row">
@@ -20,7 +20,7 @@ path="/xe-du-lich-suzuki/"
             className="col-lg-4 col-md-6 col-sm-6 col-12"
             key={`${item.name}-${index}`}
           >
-            <Card item={item} path={path}/>
+            <Card item={item} />
           </div>
         )
       })}

@@ -4,6 +4,7 @@ const data = {
   "xe-du-lich": [
     {
       id: 'swift',
+      "cat_id" : "xe-du-lich",
       name: 'Swift',
       slogan: 'Nâng tầm phong cách',
       price: 549,
@@ -11,6 +12,7 @@ const data = {
     },
     {
       id: 'celerio',
+      "cat_id" : "xe-du-lich",
       name: 'Celerio',
       slogan: 'Xe nhỏ ý tưởng lớn',
       price: 329,
@@ -18,6 +20,7 @@ const data = {
     },
     {
       id: 'ciaz',
+      "cat_id" : "xe-du-lich",
       name: 'Ciaz',
       slogan: 'Thuần chất Sedan',
       price: 499,
@@ -27,6 +30,7 @@ const data = {
   "xe-tai-nho": [
     {
       id: 'carry-pro',
+      "cat_id" : "xe-tai-nho",
       name: 'Carry Pro',
       slogan: 'Bạn đường lý tưởng',
       price: 312,
@@ -34,6 +38,7 @@ const data = {
     },
     {
       id: 'carry-truck',
+      "cat_id" : "xe-tai-nho",
       name: 'Carry Truck',
       slogan: 'Xe tải nhẹ hàng đầu',
       price: 249,
@@ -41,6 +46,7 @@ const data = {
     },
     {
       id: 'blind-van',
+      "cat_id" : "xe-tai-nho",
       name: 'Blind Van',
       slogan: 'Kinh tế, hiệu quả, bền bỉ',
       price: 293,

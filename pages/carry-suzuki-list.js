@@ -33,8 +33,7 @@ export default class CarrySuzukiList extends React.Component {
             </h2>
             <Cards
               isMobile={isMobile}
-              items={data["xe-tai-nho"]}
-              path="/xe-tai-nho-suzuki/"
+              items={data['xe-tai-nho']}
             />
           </div>
         </main>

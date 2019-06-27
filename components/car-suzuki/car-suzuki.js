@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/layout";
-import Cards from "../components/index/Cards";
-import { isMobileDetect } from "../core/mobile-detect";
+import Layout from "../layout";
+import Cards from "../index/Cards";
+import { isMobileDetect } from "../../core/mobile-detect";
 
-import LISTDATA from "../mockdata/list";
+import LISTDATA from "../../mockdata/list";
 
 export default class CarSuzuki extends React.Component {
   static getInitialProps = async ({ query: { id }, req }) => {

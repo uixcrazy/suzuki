@@ -1,7 +1,7 @@
 import React from 'react';
 import withStyles from 'react-jss';
 import Link from 'next/link';
-import { CDN_URL } from  '../constants';
+import { CDN_URL } from  '../../core/constants';
 
 const path = "/xe-du-lich-suzuki/";
 const bannerItem = {
@@ -14,7 +14,7 @@ const bannerItem = {
 const Banner = ({classes, isMobile}) => {
   return (
     <div className={classes.banner}>
-      <Link as={`${path}${bannerItem.id}`}>
+      <Link as={`${path}${bannerItem.id}`} href={`${path}${bannerItem.id}`}>
         <a className={classes.bannerLink}>
           <img
             src={`${CDN_URL}${isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}

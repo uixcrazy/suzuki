@@ -1,62 +1,39 @@
-import React from "react";
-import Layout from "../components/layout";
-import { isMobileDetect } from "../core/mobile-detect";
-import Header from "../components/carry-suzuki/Header";
+import React from 'react';
+import Layout from '../components/layout';
+import { isMobileDetect } from '../core/mobile-detect';
+import Header from '../components/carry-suzuki/Header';
+import { BREADCRUMB } from '../core/constants';
+import Content from '../components/carry-suzuki/Index';
 
-import LISTDATA from "../mockdata/list";
 
 export default class CarrySuzuki extends React.Component {
   static getInitialProps = async ({ query: { id }, req }) => {
     const isMobile = isMobileDetect(req && req.headers['user-agent']);
 
-    const resp = LISTDATA
+    const data = require(`../mockdata/${id}.json`);
+
     return {
       id,
-      data: resp,
+      data,
       isMobile
     };
   };
-  // chỉnh title theo ten xe
 
   render() {
+    const { isMobile, data } = this.props;
     return (
       <Layout
-        title='xe ô tô suzuki celerio - THUẦN CHẤT SEDAN | Nguyễn Duy Trinh, TPHCM '
-        isMobile={this.props.isMobile}
+        title={`${data.name_vi || data.name} -
+        ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki Đại Việt, Quận 2, Hồ Chí Minh `}
+        isMobile={isMobile}
         Header={Header}
+        data={data}
       >
-        {this.props.slug}
-        <br />
-        {this.props.isMobile}
+       <Content
+        isMobile={isMobile}
+        data={data}
+       />
       </Layout>
     )
   }
 }
-
-
-
-
-
-// export default () => (
-//   <Layout
-//     title='🚕 🚖 🚘  🌾 🌵 🌻 🦀 🍁 About us'
-//     // Header='header'
-//     // Nav='nav'
-//     // Footer='Footer'
-//     // Fixed
-//   >
-//     <h2
-//     style={{
-//       display: 'block',
-//       textAlign: 'center',
-//       padding: '0 20px',
-//       fontSize: '22px',
-//       lineHeight: '50px',
-//       color: '#777',
-//       textTransform: 'uppercase',
-//       fontWeight: 'bold',
-//     }}
-//     >Các dòng xe du lịch &amp; xe tải / xe thương mại <span style={{color: '#0b3145'}}>Suzuki</span> chính hãng</h2>
-//     <Cards />
-//   </Layout>
-// )

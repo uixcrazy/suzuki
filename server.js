@@ -13,6 +13,14 @@ app.prepare().then(() => {
   //   return handle(req, res)
   // })
 
+  server.get("/robots.txt", (req, res) => {
+    res.sendFile(path.join(__dirname, "./static/robots.txt"), function(err) {
+      if (err) {
+        res.status(err.status).end();
+      }
+    });
+  });
+
   server.get('/', (req, res) => {
     return app.render(req, res, '/index', req.query)
   })

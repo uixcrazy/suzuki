@@ -36,6 +36,7 @@ export default class JssDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          <meta name="robots" content="index, follow"/>
           <meta http-equiv="content-language" content="vi"/>
           <meta http-equiv="x-ua-compatible" content="ie=edge"/>
           <link rel="shortcut icon" href="static/favicon.ico" />

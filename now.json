@@ -4,13 +4,14 @@
   "alias": ["xetainhosaigon.com"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
-    { "src": "server.js", "use": "@now/node-server" }
+    { "src": "server.js", "use": "@now/node-server" },
+    { "src": "static/robots.txt", "use": "@now/static" }
   ],
   "routes": [
     { "src": "/xe-tai-nho-suzuki/(?<id>[^/]+)$", "dest": "/carry-suzuki?id=$id" },
     { "src": "/xe-du-lich-suzuki/(?<id>[^/]+)$", "dest": "/carry-suzuki?id=$id" },
     { "src": "/xe-tai-nho-suzuki", "dest": "/carry-suzuki-list" },
-    { "src": "/xe-du-lich-suzuki", "dest": "/car-suzuki-list" }
+    { "src": "/robots.txt", "dest": "/static/robots.txt" }
   ],
   "github": {
     "enabled": true,

@@ -52,10 +52,10 @@ const styles =  {
           top: 7,
         },
       },
-      '&.phone.mb a': {
-        textDecoration: 'underline',
-        marginLeft: 5,
-      },
+      // '&.phone.mb a': {
+      //   textDecoration: 'underline',
+      //   marginLeft: 5,
+      // },
       '&.mail':{
         '& .material-icons': {
           position: 'relative',
@@ -63,7 +63,6 @@ const styles =  {
         },
       },
     }
-    // color: '#B1BCC2'
   },
 };
 

@@ -98,9 +98,7 @@ export default class Index extends React.Component {
                 name={box.id}
                 key={box.id}
                 ref={DOM => this.router[box.id] = DOM}>
-                <div className="container">
-                  <Content isMobile={isMobile} data={data[box.id]}/>
-                </div>
+                <Content isMobile={isMobile} data={data[box.id]}/>
               </Element>
             )
           })}

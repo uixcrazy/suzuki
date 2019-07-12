@@ -21,27 +21,19 @@ const TopMenu = ({classes, isMobile}) => {
               />
             </a>
           </Link>
-          {isMobile
-          ? <ul className={classes.contactDetails}>
-            <li className="phone mb">
+          <ul className={classes.contactDetails}>
+            <li className="phone">
               <i className="material-icons">phone</i>&nbsp;
-               Hotline:&nbsp;
+              Hotline:&nbsp;
               <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
             </li>
+            {!isMobile &&
+            <li className="mail">
+              <i className="material-icons">mail</i>&nbsp;
+              Email:&nbsp;
+              <a href={`mailto:${MAIL}`}>{MAIL}</a>
+            </li>}
           </ul>
-          : <ul className={classes.contactDetails}>
-              <li className="phone">
-                <i className="material-icons">phone</i>&nbsp;
-                Hotline:&nbsp;
-                <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
-              </li>
-              <li className="mail">
-                <i className="material-icons">mail</i>&nbsp;
-                Email:&nbsp;
-                <a href={`mailto:${MAIL}`}>{MAIL}</a>
-              </li>
-            </ul>
-          }
           {/* <ul className={classes.social}>
             <li className="facebook">fb</li>
             <li className="zalo">zalo</li>

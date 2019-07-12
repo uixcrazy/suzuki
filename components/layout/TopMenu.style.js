@@ -23,21 +23,6 @@ const styles =  {
   logoImage: {
     height: '100%',
   },
-  iconLocation: {
-    fontSize: '1rem',
-    marginTop: '-3px',
-    marginRight: 3,
-  },
-  iconCall: {
-    fontSize: '1rem',
-    color: '#fff',
-    marginRight: 3,
-  },
-  iconMail: {
-    fontSize: '1rem',
-    color: '#c2dcea',
-    marginRight: 5,
-  },
   social: {
     display: 'flex',
     listStyle: 'none',
@@ -58,13 +43,25 @@ const styles =  {
           color: '#c2e6fb',
         },
       },
-      '&.phone a': {
-        color: '#fff',
+      '&.phone':{
+        '& a': {
+          color: '#fff',
+        },
+        '& .material-icons': {
+          position: 'relative',
+          top: 7,
+        },
       },
       '&.phone.mb a': {
         textDecoration: 'underline',
         marginLeft: 5,
-      }
+      },
+      '&.mail':{
+        '& .material-icons': {
+          position: 'relative',
+          top: 7,
+        },
+      },
     }
     // color: '#B1BCC2'
   },

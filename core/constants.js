@@ -1,5 +1,5 @@
 
-export const HOTLINE = '0333.502.335';
+export const HOTLINE = '0333502335';
 export const MAIL = 'suzuki.quanly@gmail.com';
 export const CDN_URL ='https://cdn.uixcrazy.now.sh/static/';
 // export const CDN_URL = 'http://lvtd.96.lt/';

@@ -4,8 +4,7 @@
   "alias": ["xetainhosaigon.com"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
-    { "src": "server.js", "use": "@now/node-server" },
-    { "src": "static/robots.txt", "use": "@now/static" }
+    { "src": "server.js", "use": "@now/node-server" }
   ],
   "routes": [
     { "src": "/xe-tai-nho-suzuki/(?<id>[^/]+)$", "dest": "/carry-suzuki?id=$id" },

@@ -24,19 +24,19 @@ const TopMenu = ({classes, isMobile}) => {
           {isMobile
           ? <ul className={classes.contactDetails}>
             <li className="phone mb">
-              Tư vấn:&nbsp;
+              <i className="material-icons">phone</i>&nbsp;
+               Hotline:&nbsp;
               <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
             </li>
           </ul>
           : <ul className={classes.contactDetails}>
-              <li className="address">
-                <address>440, Nguyễn Duy Trinh, Bình Trưng Đông, Quận 2, HCM</address>
-              </li>
               <li className="phone">
-                Tư vấn:&nbsp;
+                <i className="material-icons">phone</i>&nbsp;
+                Hotline:&nbsp;
                 <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
               </li>
               <li className="mail">
+                <i className="material-icons">mail</i>&nbsp;
                 Email:&nbsp;
                 <a href={`mailto:${MAIL}`}>{MAIL}</a>
               </li>

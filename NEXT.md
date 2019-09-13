@@ -8,15 +8,15 @@ next
       // <meta name="description" content="✅Đại lý xe tải Suzuki Sài Gòn Ngôi Sao là đại lý xe ô tô, xe tải Suzuki chất lượng 3S chính thức của Suzuki. Đại lý xe tải Suzuki chính hãng cung cấp Miền Nam. Hơn 10 năm hoạt động, cam kết cung cấp các dòng xe tải Suzuki, xe du lịch Suzuki chất lượng và giá cực ưu đãi tại Miền Nam.">
 
 
-      // <title>Đại Lý Suzuki Đại Việt - Quận 2 - TPHCM</title>
-// <meta name="description" content="Showroom Suzuki Đại Việt nằm tại 438-440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
+      // <title>Đại Lý Suzuki Đại Lợi- Quận 2 - TPHCM</title>
+// <meta name="description" content="Showroom Suzuki Đại Lợinằm tại 438-440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
 
 
 
 
-// <meta property="og:title" content="Đại Lý Suzuki Đại Việt - Quận 2 - TPHCM">
+// <meta property="og:title" content="Đại Lý Suzuki Đại Lợi- Quận 2 - TPHCM">
 
-// <meta property="og:description" content="Showroom Suzuki Đại Việt nằm tại 438-440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
+// <meta property="og:description" content="Showroom Suzuki Đại Lợinằm tại 438-440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
 
 
 

@@ -13,7 +13,7 @@ const Footer = props => {
           Copyright © 2019 xetainhosaigon.com. All rights reserved.
         </small>
         <div>
-          <small>Suzuki Đại Việt - 440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, Tp. Hồ Chí Minh</small>
+          <small>474 lũy bán Bích, hoà thanh tân phú, hcm </small>
         </div>
       </div>
     </footer>

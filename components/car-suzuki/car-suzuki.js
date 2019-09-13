@@ -21,7 +21,7 @@ export default class CarSuzuki extends React.Component {
   render() {
     return (
       <Layout
-        title='xe ô tô suzuki celerio - THUẦN CHẤT SEDAN | Nguyễn Duy Trinh, TPHCM '
+        title='xe ô tô suzuki celerio - THUẦN CHẤT SEDAN'
         isMobile={this.props.isMobile}
       >
         {this.props.id}

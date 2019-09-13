@@ -9,14 +9,14 @@ next
 
 
       // <title>Đại Lý Suzuki Đại Lợi- Quận 2 - TPHCM</title>
-// <meta name="description" content="Showroom Suzuki Đại Lợinằm tại 438-440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
+// <meta name="description" content="Showroom Suzuki Đại Lợinằm tại 438-440 , Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
 
 
 
 
 // <meta property="og:title" content="Đại Lý Suzuki Đại Lợi- Quận 2 - TPHCM">
 
-// <meta property="og:description" content="Showroom Suzuki Đại Lợinằm tại 438-440 Nguyễn Duy Trinh, Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
+// <meta property="og:description" content="Showroom Suzuki Đại Lợinằm tại 438-440 , Phường Bình Trưng Đông, Quận 2, TP.HCM. Suzuki Quận 2 là đại lý 3S chính thức của Suzuki Việt Nam">
 
 
 

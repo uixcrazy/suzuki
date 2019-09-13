@@ -22,7 +22,7 @@ export default class CarSuzukiList extends React.Component {
     const { isMobile, data } = this.props;
     return (
       <Layout
-        title='Đại lý xe tải | xe ô tô du lịch Suzuki tại Nguyễn Duy Trinh - Quận 2 - TPHCM '
+        title='Đại lý xe tải | xe ô tô du lịch Suzuki  '
         Header={Header}
         isMobile={isMobile}
       >

@@ -24,7 +24,7 @@ export default class Index extends React.Component {
     const { isMobile, data } = this.props;
     return (
       <Layout
-        title='Xe tải nhỏ | xe du lịch Suzuki tại Nguyễn Duy Trinh - Quận 2 - TPHCM'
+        title='Xe tải nhỏ | xe du lịch Suzuki '
         Header={Header}
         isMobile={isMobile}
       >

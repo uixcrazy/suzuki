@@ -24,7 +24,7 @@ export default class CarrySuzuki extends React.Component {
     return (
       <Layout
         title={`${data.name_vi || data.name} -
-        ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki Đại Việt, Quận 2, Hồ Chí Minh `}
+        ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki , Quận 2, Hồ Chí Minh `}
         isMobile={isMobile}
         Header={Header}
         data={data}

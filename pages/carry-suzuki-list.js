@@ -22,7 +22,7 @@ export default class CarrySuzukiList extends React.Component {
     const { isMobile, data } = this.props;
     return (
       <Layout
-        title='Đại lý xe tải | xe ô tô du lịch Suzuki  '
+        title='Đại lý xe tải | xe ô tô du lịch Suzuki'
         Header={Header}
         isMobile={isMobile}
       >

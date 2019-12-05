@@ -12,9 +12,9 @@ const Footer = props => {
         <small className="copyright">
           Copyright © 2019 xetainhosaigon.com. All rights reserved.
         </small>
-        <div>
+        {/* <div>
           <small>474 lũy bán Bích, hoà thanh tân phú, hcm </small>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

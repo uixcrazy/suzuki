@@ -23,9 +23,8 @@ const TopMenu = ({classes, isMobile}) => {
           </Link>
           <ul className={classes.contactDetails}>
             <li className="phone">
-              <i className="material-icons">phone</i>&nbsp;
-              Hotline:&nbsp;
-              <a href={`tel:${HOTLINE}`}>{HOTLINE}</a>
+              <a href={`tel:${HOTLINE}`}><i className="material-icons">phone</i>&nbsp;
+              Hotline:&nbsp;{HOTLINE}</a>
             </li>
             {!isMobile &&
             <li className="mail">

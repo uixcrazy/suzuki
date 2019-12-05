@@ -37,10 +37,12 @@ const styles =  {
         color: '#c2e6fb',
       },
       '& a': {
-        color: '#c2dcea',
+        // color: '#c2dcea',
+        color: '#fff',
         transition: 'all 0.5s ease',
         '&:hover': {
           color: '#c2e6fb',
+          textDecoration: 'none',
         },
       },
       '&.phone':{

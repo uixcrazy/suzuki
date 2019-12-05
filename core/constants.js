@@ -1,6 +1,6 @@
 
-export const HOTLINE = '0333502335';
-export const MAIL = 'hoahuongudong.dh08dt@gmail.com';
+export const HOTLINE = '0935475687';
+export const MAIL = 'xetainhosuzuki@gmail.com';
 export const CDN_URL ='https://cdn.uixcrazy.now.sh/static/';
 // export const CDN_URL = 'http://lvtd.96.lt/';
 

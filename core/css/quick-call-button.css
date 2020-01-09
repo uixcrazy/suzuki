@@ -45,7 +45,7 @@
 }
 
 .phonering-alo-phone:hover .phonering-alo-ph-circle {
-  border-color:#a1b6c1;
+  border-color:#ea7d6d;
   opacity:.5
 }
 
@@ -60,7 +60,7 @@
 }
 
 .phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-circle {
-  border-color: var(--secondary);
+  border-color: #dd341c;
   opacity:.5
 }
 
@@ -92,7 +92,7 @@
 }
 
 .phonering-alo-phone:hover .phonering-alo-ph-circle-fill {
-  background-color: #a1b6c1;
+  background-color: #ea7d6d;
   opacity:.75
 }
 
@@ -106,7 +106,7 @@
 }
 
 .phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-circle-fill {
-  background-color: #a1b6c1;
+  background-color: #ea7d6d;
   opacity:.75
 }
 
@@ -137,7 +137,7 @@
 }
 
 .phonering-alo-phone:hover .phonering-alo-ph-img-circle {
-  background-color: var(--secondary);
+  background-color: #dd341c;
 }
 
 .phonering-alo-phone .phonering-alo-ph-img-circle {
@@ -149,7 +149,7 @@
 }
 
 .phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-img-circle {
-  background-color: var(--secondary);
+  background-color: #dd341c;
 }
 
 @-webkit-keyframes phonering-alo-circle-anim {

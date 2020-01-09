@@ -1,6 +1,4 @@
 import React from 'react';
-// import PlaceIcon from '@material-ui/icons/Place';
-// import PhoneIcon from '@material-ui/icons/Phone';
 // import MailIcon from '@material-ui/icons/Mail';
 import Link from 'next/link';
 import withStyles from 'react-jss';
@@ -17,7 +15,7 @@ const TopMenu = ({classes, isMobile}) => {
               <img
                 className={classes.logoImage}
                 src="/static/logo.jpg"
-                alt="suzuki nguyen duy trinh"
+                alt="suzuki"
               />
             </a>
           </Link>

@@ -5,7 +5,6 @@ import Header from '../components/carry-suzuki/Header';
 import { BREADCRUMB } from '../core/constants';
 import Content from '../components/carry-suzuki/Index';
 
-
 export default class CarrySuzuki extends React.Component {
   static getInitialProps = async ({ query: { id }, req }) => {
     const isMobile = isMobileDetect(req && req.headers['user-agent']);

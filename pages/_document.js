@@ -35,10 +35,10 @@ export default class JssDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
           <meta name="robots" content="index, follow"/>
-          <meta http-equiv="content-language" content="vi"/>
-          <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+          <meta httpEquiv="content-language" content="vi"/>
+          <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
           <link rel="shortcut icon" href="static/favicon.ico" />
           <link rel="icon" type="image/png" href="static/favicon-suzuki.png" sizes="32x32"/>
           <link rel="icon" type="image/png" href="static/favicon-suzuki.png" sizes="16x16"/>

@@ -36,7 +36,9 @@ const Card = ({
           </h3>
           <p className={classes.productSlogan}>{item.slogan}</p>
         </div>
-        <div className={classes.productPrice}>{item.price} TRIỆU</div>
+        <div className={classes.productPrice}>
+          {item.price} <small>{typeof item.price === 'number' ? 'TRIỆU' : ''}</small>
+        </div>
       </div>
   </div>
   );

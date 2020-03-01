@@ -7,7 +7,7 @@ const data = {
       "cat_id" : "xe-du-lich",
       name: 'Swift',
       slogan: 'Nâng tầm phong cách',
-      price: 549,
+      price: "liên hệ",
       thumbnail: 'swift/swift-thumb.jpg',
     },
     {
@@ -15,7 +15,7 @@ const data = {
       "cat_id" : "xe-du-lich",
       name: 'Celerio',
       slogan: 'Xe nhỏ ý tưởng lớn',
-      price: 329,
+      price: "liên hệ",
       thumbnail: 'celerio/celerio-thumb.jpg',
     },
     {
@@ -23,7 +23,7 @@ const data = {
       "cat_id" : "xe-du-lich",
       name: 'Ciaz',
       slogan: 'Thuần chất Sedan',
-      price: 499,
+      price: "liên hệ",
       thumbnail: 'ciaz/ciaz-thumb.jpg',
     },
   ],
@@ -33,7 +33,7 @@ const data = {
       "cat_id" : "xe-tai-nho",
       name: 'Carry Pro',
       slogan: 'Bạn đường lý tưởng',
-      price: 312,
+      price: "liên hệ",
       thumbnail: 'carry-pro/carry-pro-thumb.jpg',
     },
     {

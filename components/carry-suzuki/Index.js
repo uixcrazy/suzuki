@@ -7,6 +7,7 @@ import { Element, scroller } from 'react-scroll';
 
 import NavSecondary from '../layout/NavSecondary';
 import Article from './Article';
+import KhuVucGiaoHang from './KhuVucGiaoHang';
 
 export default class Index extends React.Component {
   router = {};
@@ -65,12 +66,19 @@ export default class Index extends React.Component {
       {
         id: "about",
         name: `Về ${data.name}`,
+        isArticle: true,
         component: Article,
       },
       {
         id: "specifications",
         name: "Thông số kỹ thuật",
+        isArticle: true,
         component: Article,
+      },
+      {
+        id: "cskh",
+        name: "Chăm sóc khách hàng",
+        component: KhuVucGiaoHang,
       },
     ];
 
@@ -98,7 +106,11 @@ export default class Index extends React.Component {
                 name={box.id}
                 key={box.id}
                 ref={DOM => this.router[box.id] = DOM}>
-                <Content isMobile={isMobile} data={data[box.id]}/>
+                {box.isArticle
+                  ? <Content isMobile={isMobile} data={data[box.id]}/>
+                  : <Content />
+                }
+
               </Element>
             )
           })}

@@ -22,10 +22,10 @@ const QuickCallButton = ({classes}) => {
 export default withStyles({
   btnZalo: {
     position: 'fixed',
-    bottom: 65,
-    left: 120,
+    bottom: 88,
+    left: 140,
     cursor: 'pointer',
-    zIndex: '9999',
+    zIndex: '1000',
     '& img': {
       width: '50px',
       borderRadius: '50%',

@@ -10,11 +10,12 @@ const Footer = props => {
     }}>
       <div className="container">
         <small className="copyright">
-          Copyright © 2019 xetainhosaigon.com. All rights reserved.
+          Copyright © 2020 xetainhosaigon.com. All rights reserved.
         </small>
-        {/* <div>
-          <small>474 lũy bán Bích, hoà thanh tân phú, hcm </small>
-        </div> */}
+        <small>
+          <p>Cam kết <strong>GIÁ</strong> Suzuki các loại <strong>tốt nhất Sài Gòn</strong>. Chế độ hậu mãi chăm sóc khách hàng UY TÍN.</p>
+          <p>Xem xe trực tiếp và thử lái tại Đại lý chính hãng</p>
+        </small>
       </div>
     </footer>
   );

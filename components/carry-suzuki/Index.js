@@ -5,9 +5,10 @@ import _debounce from 'lodash.debounce';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { Element, scroller } from 'react-scroll';
 
-import NavSecondary from '../layout/NavSecondary';
+import NavSecondary from './NavSecondary';
 import Article from './Article';
 import Cskh from './Cskh';
+import LaiThu from './LaiThu';
 
 export default class Index extends React.Component {
   router = {};
@@ -65,20 +66,29 @@ export default class Index extends React.Component {
     const dataNavigation = [
       {
         id: "about",
-        name: `Về ${data.name}`,
+        name: isMobile ? `Về <br /> ${data.name}`: `Về ${data.name}`,
         isArticle: true,
         component: Article,
+        classSpc: '',
       },
       {
         id: "specifications",
-        name: "Thông số kỹ thuật",
+        name: isMobile ? "Thông số <br /> kỹ thuật ": "Thông số kỹ thuật",
         isArticle: true,
         component: Article,
+        classSpc: '',
+      },
+      {
+        id: "dklaithu",
+        name: isMobile ? "Đăng ký <br /> lái thử" : "Đăng ký lái thử",
+        component: LaiThu,
+        classSpc: 'laithu',
       },
       {
         id: "cskh",
         name: isMobile ? "CSKH" : "Chăm sóc khách hàng",
         component: Cskh,
+        classSpc: '',
       },
     ];
 
@@ -90,7 +100,11 @@ export default class Index extends React.Component {
               isMobile={isMobile}
               style={{...style,...{zIndex: 10}}}
               boxActive={boxActive}
-              navList={dataNavigation.map(item=>({scrollName: item.id, name: item.name}))}
+              navList={dataNavigation.map(item=>({
+                scrollName: item.id,
+                name: item.name,
+                classSpc: item.classSpc
+              }))}
               updateBoxActive={this.updateBoxActive}
             />
           )}

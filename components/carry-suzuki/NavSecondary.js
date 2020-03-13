@@ -24,10 +24,9 @@ export class NavSecondary extends React.Component {
               <li
                 key={index}
                 onClick={() => updateBoxActive(item.scrollName)}
-                className={[classes.item, boxActive === item.scrollName ? 'active' : ''].join(' ')}
-              >
-                {item.name}
-              </li>
+                className={[classes.item, boxActive === item.scrollName ? 'active' : '', isMobile ? 'mb' : '', item.classSpc].join(' ')}
+                dangerouslySetInnerHTML={{ __html: item.name }}
+              />
             ))}
           </ul>
         </div>
@@ -53,20 +52,33 @@ const styles = {
   },
   item: {
     position: 'relative',
-    lineHeight: '45px',
-    padding: '0.25rem 1.25rem 0',
+    padding: '0.75rem 1.25rem',
     borderRight: '1px solid #e5e5e5',
+    display: 'flex',
+    alignItems: 'center',
     fontWeight: 500,
     color: 'var(--secondary)',
     cursor: 'pointer',
+    '&.mb': {
+      padding: '0.25rem 0.75rem',
+    },
     '&.active': {
       cursor: 'default',
       color: 'var(--primary)',
     },
     '&:last-child ': {
       borderRight: 0,
+    },
+    // classSpc
+    '&.laithu': {
+      background: '#2776b0',
+      color: '#fff',
+      '&.active': {
+        background: "#00adef",
+      }
     }
   },
+
 };
 
 export default injectSheet(styles)(NavSecondary);

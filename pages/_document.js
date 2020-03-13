@@ -39,9 +39,9 @@ export default class JssDocument extends Document {
           <meta name="robots" content="index, follow"/>
           <meta httpEquiv="content-language" content="vi"/>
           <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-          <link rel="shortcut icon" href="static/favicon.ico" />
-          <link rel="icon" type="image/png" href="static/favicon-suzuki.png" sizes="32x32"/>
-          <link rel="icon" type="image/png" href="static/favicon-suzuki.png" sizes="16x16"/>
+          <link rel="shortcut icon" href="https://xetainhosaigon.com/static/favicon.ico" />
+          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/static/favicon-suzuki.png" sizes="32x32"/>
+          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/static/favicon-suzuki.png" sizes="16x16"/>
           <meta name="theme-color" content={"#fff"} />
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap&subset=vietnamese" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>

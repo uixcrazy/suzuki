@@ -1,5 +1,5 @@
 
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -18,6 +18,8 @@
   --primary: #d11717; /* darker #a90c0c */
   --secondary: #0b3145; /* #0b3145;  #003145 */
 
+  --color-border: #ebeff0;
+  --white: #fff;
 
   --success: #28a745;
   --info: #17a2b8;

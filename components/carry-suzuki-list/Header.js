@@ -6,9 +6,9 @@ import { CDN_URL } from  '../../core/constants';
 
 const path = "/xe-tai-nho-suzuki/";
 const bannerItem = {
-  id: 'xetainho',
+  id: 'carry-pro',
   thumb: 'khuyenmai/carry_pro.jpg',
-  thumbMb: 'khuyenmai/carry_pro.jpg',
+  thumbMb: 'khuyenmai/carry_pro_mb.jpg',
   name: 'Xe tải nhỏ khuyến mãi 2020',
 }
 
@@ -42,7 +42,7 @@ const styles = {
   banner: {
     height: 540,
     '&$mb': {
-      height: 200,
+      height: 'auto',
     }
   },
   bannerCt: {

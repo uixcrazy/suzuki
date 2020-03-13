@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Cards from "../components/index/Cards";
-import Header from "../components/index/Header";
+import Header from "../components/carry-suzuki/HeaderList";
 import { isMobileDetect } from "../core/mobile-detect";
 
 import LISTDATA from "../mockdata/list";

@@ -7,7 +7,7 @@ import { Element, scroller } from 'react-scroll';
 
 import NavSecondary from '../layout/NavSecondary';
 import Article from './Article';
-import KhuVucGiaoHang from './KhuVucGiaoHang';
+import Cskh from './Cskh';
 
 export default class Index extends React.Component {
   router = {};
@@ -77,8 +77,8 @@ export default class Index extends React.Component {
       },
       {
         id: "cskh",
-        name: "Chăm sóc khách hàng",
-        component: KhuVucGiaoHang,
+        name: isMobile ? "CSKH" : "Chăm sóc khách hàng",
+        component: Cskh,
       },
     ];
 
@@ -108,7 +108,7 @@ export default class Index extends React.Component {
                 ref={DOM => this.router[box.id] = DOM}>
                 {box.isArticle
                   ? <Content isMobile={isMobile} data={data[box.id]}/>
-                  : <Content />
+                  : <Content isMobile={isMobile}/>
                 }
 
               </Element>

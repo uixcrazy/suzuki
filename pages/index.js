@@ -29,14 +29,25 @@ export default class Index extends React.Component {
         isMobile={isMobile}
       >
         <main style={{margin: '15px 0'}}>
+          <h2 className={`h2 ${isMobile ? "mb" :''}`}>
+            Các dòng xe tải nhỏ / xe thương mại của <span>Suzuki</span>
+          </h2>
+          <img style={{
+            width: '100vw',
+            height: '100%',
+            display: 'block',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            marginBottom: 10,
+          }}
+          src="https://cdn.uixcrazy.now.sh/static/khuyenmai/carry_pro.jpg" alt="khuyến mãi carry pro" />
           <div className="container">
-            <h2 className={`h2 ${isMobile ? "mb" :''}`}>
-              Các dòng xe tải nhỏ / xe thương mại của <span>Suzuki</span>
-            </h2>
             <Cards
               isMobile={isMobile}
               items={data["xe-tai-nho"]}
             />
+          </div>
+          <div className="container">
             <h2 className={`h2 ${isMobile ? "mb" :''}`}>
               Các dòng xe du lịch của <span>Suzuki</span>
             </h2>

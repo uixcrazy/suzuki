@@ -87,6 +87,7 @@ export default class Index extends React.Component {
         <Sticky>
           {({ style }) => (
             <NavSecondary
+              isMobile={isMobile}
               style={{...style,...{zIndex: 10}}}
               boxActive={boxActive}
               navList={dataNavigation.map(item=>({scrollName: item.id, name: item.name}))}
@@ -110,7 +111,6 @@ export default class Index extends React.Component {
                   ? <Content isMobile={isMobile} data={data[box.id]}/>
                   : <Content isMobile={isMobile}/>
                 }
-
               </Element>
             )
           })}

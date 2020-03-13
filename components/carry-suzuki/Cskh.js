@@ -5,7 +5,7 @@ import { HOTLINE, MAIL } from '../../core/constants';
 const KhuVucGiaoHang = ({classes}) => {
   return (
     <div className={classes.khuvucgiaohang}>
-      <h2 className={classes.h3}>GIAO XE TẬN NHÀ, HỖ TRỢ ĐĂNG KIỂM CÁC KHU VỰC SAU:</h2>
+      <p className={classes.h3}>GIAO XE TẬN NHÀ, HỖ TRỢ ĐĂNG KIỂM CÁC KHU VỰC SAU:</p>
 <p><span className={classes.emc}>— Nam bộ:</span> TP. Hồ Chí Minh, Bình Dương, Bình Phước, Bà Rịa — Vũng Tàu, Đồng Nai, Tây Ninh. Và các tỉnh miền Tây: Cần Thơ, Bến Tre, An Giang, Hậu Giang, Tiền Giang, Cà Mau, Đồng Tháp, Long An, Vĩnh Long, Sóc Trăng, Trà Vinh, Bạc Liêu, Kiên Giang…</p>
 <p><span className={classes.emc}>— Miền Trung:</span> Bình Thuận, Ninh Thuận, Quảng Ngãi, Khánh Hòa…</p>
 <p><span className={classes.emc}>— Tây Nguyên:</span> Gia Lai, KonTum, Đắc Lắc, Lâm Đồng, Đắc Nông.</p>
@@ -28,10 +28,9 @@ const Cskh = ({classes, isMobile}) => {
 
 export default withStyles({
   cskh: {
-    marginTop: 35,
+    paddingTop: 25,
   },
   khuvucgiaohang: {
-
     '& > p': {
       padding: '5px 0',
       color: '#555',
@@ -47,7 +46,6 @@ export default withStyles({
   h3: {
     display: 'block',
     fontSize: '18px',
-    lineHeight: '50px',
     color: '#777',
     fontWeight: 'bold',
   },

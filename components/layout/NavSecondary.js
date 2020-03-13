@@ -4,6 +4,7 @@ import injectSheet from 'react-jss';
 export class NavSecondary extends React.Component {
   render() {
     const {
+      isMobile,
       style,
       classes,
       boxActive = "about",
@@ -16,7 +17,7 @@ export class NavSecondary extends React.Component {
       updateBoxActive = () => {console.log("click to sidebar!!!")},
     } = this.props;
     return (
-      <div style={style} className={classes.sidenav}>
+      <div style={style} className={`${classes.sidenav} ${isMobile ? 'mb' : ''}`}>
         <div className="container">
           <ul className={classes.sidenavCt}>
             {navList.map((item, index) => (
@@ -41,6 +42,9 @@ const styles = {
     background: 'rgba(255, 255, 255, 0.95)',
     borderTop: '1px solid #e5e5e5',
     borderBottom: '1px solid #e5e5e5',
+    '&.mb': {
+      fontSize: 14,
+    }
   },
   sidenavCt: {
     display: 'flex',
@@ -59,6 +63,9 @@ const styles = {
       cursor: 'default',
       color: 'var(--primary)',
     },
+    '&:last-child ': {
+      borderRight: 0,
+    }
   },
 };
 

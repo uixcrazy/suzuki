@@ -34,7 +34,7 @@ const data = {
       name: 'Carry Pro',
       slogan: 'Bạn đường lý tưởng',
       price: "liên hệ",
-      thumbnail: 'carry-pro/carry-pro-thumb.jpg',
+      thumbnail: 'carry-pro/carry-pro-thumb.png',
     },
     {
       id: 'carry-truck',
@@ -42,7 +42,7 @@ const data = {
       name: 'Carry Truck',
       slogan: 'Xe tải nhẹ hàng đầu',
       price: 249,
-      thumbnail: 'carry-truck/carry-truck-thumb.jpg',
+      thumbnail: 'carry-truck/carry-truck-thumb.png',
     },
     {
       id: 'blind-van',
@@ -50,7 +50,7 @@ const data = {
       name: 'Blind Van',
       slogan: 'Kinh tế, hiệu quả, bền bỉ',
       price: 293,
-      thumbnail: 'blind-van/blind-van-thumb.jpg',
+      thumbnail: 'blind-van/blind-van-thumb.png',
     },
   ]
 }

@@ -40,9 +40,9 @@ const styles = {
     position: 'relative',
   },
   banner: {
-    height: 450,
+    height: 540,
     '&$mb': {
-      height: 320,
+      height: 200,
     }
   },
   bannerCt: {

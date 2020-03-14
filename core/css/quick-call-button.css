@@ -3,13 +3,9 @@
 */
 
 .phonering-alo-phone {
-  position: fixed;
-  left: -20px;
-  bottom: 54px;
-  z-index: 1000;
+  position: relative;
   width: 160px;
   height: 160px;
-  /* zoom: .8; */
   transform:scale(.8);
 }
 

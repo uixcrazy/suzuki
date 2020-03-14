@@ -22,7 +22,7 @@ export default ({
       {Header && <Header isMobile={isMobile} data={data}/>}
       {children}
       {Footer && <Footer />}
-      <QuickCallButton />
+      <QuickCallButton isMobile={isMobile}/>
     </React.Fragment>
   )
 }

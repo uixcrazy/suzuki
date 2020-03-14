@@ -20,6 +20,18 @@ const TYPE = [
     id: 'blind-van',
     name: 'Suzuki Blind Van'
   },
+  {
+    id: 'celerio',
+    name: 'Suzuki Celerio'
+  },
+  {
+    id: 'swift',
+    name: 'Suzuki Swift'
+  },
+  {
+    id: 'ciaz',
+    name: 'Suzuki Ciaz'
+  }
 ];
 
 const ThanksBox = ({ classes }) => (
@@ -39,6 +51,7 @@ class RequestInfoLaiThu extends Component {
       type: '',
       error: false,
       already: false,
+      isSubmitting: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -58,50 +71,53 @@ class RequestInfoLaiThu extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    const { id } = this.props;
+    const __this = this;
     const {
       name,
       sdt,
       email,
       type,
     } = this.state;
-    const isPhoneCheckArr = sdt.replace(/\D/g, "").match(/^\d{10}$/g);
-    const isPhoneCheck = isPhoneCheckArr && isPhoneCheckArr.length && isPhoneCheckArr[0].length < 20;
+    this.setState({ isSubmitting: true });
+    const isPhoneCheck = sdt.length > 9 && sdt.length < 20;
+
     const isEmailCheck = validateEmail(email);
-    console.log(this.state);
     if (isPhoneCheck || isEmailCheck) {
       const templateParams = {
         from_name: `${name} ${sdt}`,
         to_name: 'cskh - DaiViet',
         subject: 'tuvan - xetainhosaigon',
         message_html: `
-  <div>
-    <p style="color:#999999">Name: ${name}</p>
-    <p style="color:#999999">SDT: ${sdt}</p>
-    <p style="color:#999999">Email: ${email}</p>
-    <p style="color:#999999">Type: ${type}</p>
-  <div>
+<div>
+  <p style="color:#999999">Name: ${name}</p>
+  <p style="color:#999999">SDT: ${sdt}</p>
+  <p style="color:#999999">Email: ${email}</p>
+  <p style="color:#999999">Type: ${type}</p>
+<div>
         `,
       }
       semls.send('suzuki_cskh_gmail_com', 'template_0sB1Tjjx', templateParams, 'user_K7OtNxNUKO734y3WeiYT3')
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
-        localStorage.setItem(`xetainhosaigon___dklaithu___${this.props.id}`, "1");
-        this.setState({ already: true });
+        localStorage.setItem(`xetainhosaigon___dklaithu___${id}`, "1");
+        __this.setState({ already: true, isSubmitting: false });
       }, function(error) {
         console.log('FAILED...', error);
+        __this.setState({ isSubmitting: false });
       });
     } else {
-      this.setState({ error: true });
+      this.setState({ error: true, isSubmitting: false });
     }
   }
 
   render() {
     const { classes, id } = this.props;
-    const { already, error } = this.state;
+    const { already, error, isSubmitting } = this.state;
     const type = TYPE.find(t => t.id === id);
 
     return already ? <ThanksBox classes={classes} /> : (
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <div className={classes.formGr}>
           <label htmlFor="name">Họ Tên:</label>
           <input
@@ -132,7 +148,21 @@ class RequestInfoLaiThu extends Component {
         </div>
         {error ? <p className={classes.error}>Vui lòng kiểm tra lại <strong>Số điện thoại</strong> hay <strong>Email</strong> vừa nhập</p> : ""}
         <p className={classes.noteForU}>Vui lòng điền <strong>Số điện thoại</strong> hoặc <strong>Email</strong>, để chúng tôi liên hệ với bạn trong thời gian sớm nhất!.</p>
-        <input type="submit" value="Hoàn Tất Đăng Ký" className={classes.btnSubmit} />
+        {
+          isSubmitting
+          ? <input
+            type="button"
+            value="Đang Gửi Thông Tin ..."
+            className={classes.btnIsSubmitting}
+          />
+          : <input
+            type="button"
+            value="Hoàn Tất Đăng Ký"
+            className={classes.btnSubmit}
+            onClick={this.handleSubmit}
+          />
+        }
+
       </form>
     );
   }
@@ -167,6 +197,17 @@ export default withStyles({
     marginTop: 5,
     background: '#2776b0',
     color: '#fff',
+    padding: '10px 30px',
+    borderRadius: '30px',
+    border: 0,
+    borderRadius: '4px',
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+  },
+  btnIsSubmitting: {
+    marginTop: 5,
+    background: '#c8e0f1',
+    color: '#2775b1',
     padding: '10px 30px',
     borderRadius: '30px',
     border: 0,

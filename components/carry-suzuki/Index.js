@@ -58,6 +58,7 @@ export default class Index extends React.Component {
 
   render() {
     const {
+      id,
       isMobile,
       data,
     } = this.props;
@@ -123,7 +124,7 @@ export default class Index extends React.Component {
                 ref={DOM => this.router[box.id] = DOM}>
                 {box.isArticle
                   ? <Content isMobile={isMobile} data={data[box.id]}/>
-                  : <Content isMobile={isMobile}/>
+                  : <Content id={id} isMobile={isMobile}/>
                 }
               </Element>
             )

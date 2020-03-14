@@ -19,7 +19,7 @@ export default class CarrySuzuki extends React.Component {
   };
 
   render() {
-    const { isMobile, data } = this.props;
+    const { id, isMobile, data } = this.props;
     return (
       <Layout
         title={`${data.name_vi || data.name} -
@@ -29,6 +29,7 @@ export default class CarrySuzuki extends React.Component {
         data={data}
       >
        <Content
+        id={id}
         isMobile={isMobile}
         data={data}
        />

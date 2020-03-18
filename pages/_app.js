@@ -1,6 +1,6 @@
 import App from 'next/app';
-import { DefaultSeo } from 'next-seo';
-import SEO from '../core/next-seo.config';
+// import { DefaultSeo } from 'next-seo';
+// import SEO from '../core/next-seo.config';
 
 export default class MyApp extends App {
   componentDidMount () {
@@ -11,13 +11,13 @@ export default class MyApp extends App {
     }
   }
 
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <>
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
-      </>
-    )
-  }
+  // render() {
+  //   const { Component, pageProps } = this.props;
+  //   return (
+  //     <>
+  //       <DefaultSeo {...SEO} />
+  //       <Component {...pageProps} />
+  //     </>
+  //   )
+  // }
 }

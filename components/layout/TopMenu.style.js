@@ -8,17 +8,23 @@ const styles =  {
     background: 'var(--secondary)', // #0b3145
     '& .container': {
       height: '100%',
-    }
+    },
+    '&.mb': {
+      height: 90,
+      lineHeight: '45px',
+    },
   },
   topNavCt: {
     display: 'flex',
     height: '100%',
+    '&.mb': {
+      height: '50%',
+    }
   },
   homelink: {
     display: 'inline-flex',
     width: 150,
     borderRight: '1px solid rgba(255, 255, 255, 0.2)',
-    marginRight: 10,
   },
   logoImage: {
     height: '100%',
@@ -27,9 +33,27 @@ const styles =  {
     display: 'flex',
     listStyle: 'none',
   },
+  slogan: {
+    background: 'var(--primary)',
+    paddingRight: 25,
+    paddingLeft: 25,
+    fontWeight: 'bold',
+    fontSize: '1.25rem',
+    '&.mb': {
+      paddingRight: 5,
+      paddingLeft: 5,
+      fontSize: '1rem',
+      width: '100%',
+      textAlign: 'center',
+      lineHeight: 1.2,
+      display: 'flex',
+      alignItems: 'center',
+    }
+  },
   contactDetails: {
     display: 'flex',
     listStyle: 'none',
+    marginLeft: 10,
     '& li': {
       color: '#c2dcea',
       paddingRight: 20,
@@ -37,7 +61,6 @@ const styles =  {
         color: '#c2e6fb',
       },
       '& a': {
-        // color: '#c2dcea',
         color: '#fff',
         transition: 'all 0.5s ease',
         '&:hover': {
@@ -50,14 +73,11 @@ const styles =  {
           color: '#fff',
         },
         '& .material-icons': {
+          color: '#c2e6fb',
           position: 'relative',
           top: 7,
         },
       },
-      // '&.phone.mb a': {
-      //   textDecoration: 'underline',
-      //   marginLeft: 5,
-      // },
       '&.mail':{
         '& .material-icons': {
           position: 'relative',
@@ -66,6 +86,18 @@ const styles =  {
       },
     }
   },
+  contactDetailsMb: {
+    position: 'absolute',
+    top: 45,
+    left: 0,
+    width: '100%',
+    textAlign: 'center',
+    background: '#fff',
+    '& a': {
+      fontSize: '1.25rem',
+      color: 'var(--primary)',
+    }
+  }
 };
 
 export default styles;

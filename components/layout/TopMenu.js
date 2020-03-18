@@ -1,15 +1,14 @@
 import React from 'react';
-// import MailIcon from '@material-ui/icons/Mail';
 import Link from 'next/link';
 import withStyles from 'react-jss';
 import styles from './TopMenu.style';
-import { HOTLINE, MAIL } from '../../core/constants';
+import { HOTLINE, HOTLINE_SHOW, MAIL, SLOGAN } from '../../core/constants';
 
 const TopMenu = ({classes, isMobile}) => {
   return (
-    <div className={classes.topNav}>
+    <div className={`${classes.topNav} ${isMobile && 'mb'}`}>
       <div className="container">
-        <div className={classes.topNavCt}>
+        <div className={`${classes.topNavCt} ${isMobile && 'mb'}`}>
           <Link href="/">
             <a className={classes.homelink}>
               <img
@@ -19,24 +18,26 @@ const TopMenu = ({classes, isMobile}) => {
               />
             </a>
           </Link>
-          <ul className={classes.contactDetails}>
-            <li className="phone">
-              <a href={`tel:${HOTLINE}`}><i className="material-icons">phone</i>&nbsp;
-              Hotline:&nbsp;{HOTLINE}</a>
-            </li>
-            {!isMobile &&
-            <li className="mail">
-              <i className="material-icons">mail</i>&nbsp;
-              Email:&nbsp;
-              <a href={`mailto:${MAIL}`}>{MAIL}</a>
-            </li>}
-          </ul>
-          {/* <ul className={classes.social}>
-            <li className="facebook">fb</li>
-            <li className="zalo">zalo</li>
-          </ul> */}
+          <div className={`${classes.slogan} ${isMobile ? 'mb' : ''}`}
+            dangerouslySetInnerHTML={{ __html: SLOGAN }} />
+          {!isMobile &&
+            <ul className={classes.contactDetails}>
+              <li className="phone">
+                <a href={`tel:${HOTLINE}`}><i className="material-icons">phone</i>&nbsp;
+                {HOTLINE_SHOW}</a>
+              </li>
+              <li className="mail">
+                <i className="material-icons">mail</i>&nbsp;<a href={`mailto:${MAIL}`}>{MAIL}</a>
+              </li>
+            </ul>
+          }
         </div>
       </div>
+      { isMobile &&
+        <div className={classes.contactDetailsMb}>
+          <a href={`tel:${HOTLINE}`}>Liên hệ: <strong>{HOTLINE_SHOW}</strong></a>
+        </div>
+      }
     </div>
   );
 };

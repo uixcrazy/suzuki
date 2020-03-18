@@ -8,7 +8,7 @@ import '../../core/css/style.scss';
 
 export default ({
   children,
-  title = 'This is the default title',
+  title,
   Header = HeaderDefault,
   Footer = FooterDefault,
   isMobile = false,
@@ -16,9 +16,7 @@ export default ({
 }) => {
   return (
     <React.Fragment>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      {title && <Head><title>{title}</title></Head>}
       {Header && <Header isMobile={isMobile} data={data}/>}
       {children}
       {Footer && <Footer />}

@@ -1,6 +1,6 @@
 export default {
   title: "Xe tải nhỏ | xe du lịch Suzuki",
-  description: "Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn | dòng SUV hàng đầu Suzuki Ertiga",
+  description: "Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn | dòng xe đa dụng hàng đầu Suzuki Ertiga",
   canonical: "http://xetainhosaigon.com/",
   site_name: "Xe tải nhỏ Sài Gòn",
   openGraph: {

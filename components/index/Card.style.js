@@ -6,8 +6,17 @@ export default {
     border: 'none',
     marginBottom: 20,
   },
-  productImgWrapper: {
+  alink: {
     textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'none',
+      '& $productName': {
+        textDecoration: 'none',
+        color: '#d11717',
+      }
+    },
+  },
+  productImgWrapper: {
     width: '100%',
     display: 'block',
     overflow: 'hidden',
@@ -34,14 +43,8 @@ export default {
   },
   productName: {
     marginBottom: 3,
-    '& a': {
-      color: '#555',
-      transition: 'all 0.5s ease',
-      '&:hover': {
-        textDecoration: 'none',
-        color: '#d11717',
-      }
-    },
+    color: '#555',
+    transition: 'all 0.5s ease',
   },
   productSlogan: {
     fontSize: '13px',

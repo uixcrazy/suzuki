@@ -1,13 +1,13 @@
 import App from 'next/app';
-// import { DefaultSeo } from 'next-seo';
-// import SEO from '../core/next-seo.config';
+import Head from 'next/head';
+import '../core/css/style.scss';
 
 export default class MyApp extends App {
-  componentDidMount () {
+  componentDidMount() {
     const style = document.getElementById('server-side-styles')
 
     if (style) {
-      style.parentNode.removeChild(style);
+      style.parentNode.removeChild(style)
     }
   }
 
@@ -23,9 +23,9 @@ export default class MyApp extends App {
           <meta name="robots" content="index, follow"/>
           <meta httpEquiv="content-language" content="vi"/>
           <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-          <link rel="shortcut icon" href="https://xetainhosaigon.com/static/favicon.ico" />
-          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/static/favicon-suzuki.png" sizes="32x32"/>
-          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/static/favicon-suzuki.png" sizes="16x16"/>
+          <link rel="shortcut icon" href="https://xetainhosaigon.com/public/static/favicon.ico" />
+          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/public/static/favicon-suzuki.png" sizes="32x32"/>
+          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/public/static/favicon-suzuki.png" sizes="16x16"/>
           <meta name="theme-color" content={"#fff"} />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
         </Head>

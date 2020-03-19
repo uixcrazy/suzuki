@@ -10,7 +10,8 @@
     { "src": "/xe-tai-nho-suzuki/(?<id>[^/]+)$", "dest": "/carry-suzuki?id=$id" },
     { "src": "/xe-du-lich-suzuki/(?<id>[^/]+)$", "dest": "/carry-suzuki?id=$id" },
     { "src": "/xe-tai-nho-suzuki", "dest": "/carry-suzuki-list" },
-    { "src": "/robots.txt", "dest": "/static/robots.txt" }
+    { "src": "/xe-du-lich-suzuki", "dest": "/car-suzuki-list" },
+    { "src": "/robots.txt", "dest": "/public/static/robots.txt" }
   ],
   "github": {
     "enabled": true,

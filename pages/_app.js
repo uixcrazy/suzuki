@@ -23,9 +23,11 @@ export default class MyApp extends App {
           <meta name="robots" content="index, follow"/>
           <meta httpEquiv="content-language" content="vi"/>
           <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-          <link rel="shortcut icon" href="https://xetainhosaigon.com/public/static/favicon.ico" />
-          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/public/static/favicon-suzuki.png" sizes="32x32"/>
-          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/public/static/favicon-suzuki.png" sizes="16x16"/>
+          <meta name="keywords" content="Xe tải nhỏ, xe tải suzuki, xe tải suzuki giá rẻ, xe tải nhẹ"></meta>
+
+          <link rel="shortcut icon" href="https://xetainhosaigon.com/public/favicon.ico" />
+          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/public/favicon-suzuki.png" sizes="32x32"/>
+          <link rel="icon" type="image/png" href="https://xetainhosaigon.com/public/favicon-suzuki.png" sizes="16x16"/>
           <meta name="theme-color" content={"#fff"} />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
         </Head>

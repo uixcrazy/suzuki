@@ -1,8 +1,9 @@
 import React from 'react';
+import { NextSeo } from 'next-seo';
 import Layout from '../components/layout';
 import { isMobileDetect } from '../core/mobile-detect';
 import Header from '../components/carry-suzuki/Header';
-import { BREADCRUMB } from '../core/constants';
+import { BREADCRUMB, PATH } from '../core/constants';
 import Content from '../components/carry-suzuki/Index';
 
 export default class CarrySuzuki extends React.Component {
@@ -21,19 +22,24 @@ export default class CarrySuzuki extends React.Component {
   render() {
     const { id, isMobile, data } = this.props;
     return (
-      <Layout
-        title={`${data.name_vi || data.name} -
-        ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki`}
-        isMobile={isMobile}
-        Header={Header}
-        data={data}
-      >
-       <Content
-        id={id}
-        isMobile={isMobile}
-        data={data}
-       />
-      </Layout>
+      <>
+        <NextSeo
+          title={`${data.name_vi || data.name} - ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki`}
+          description={data.description}
+          canonical={`http://xetainhosaigon.com${PATH[data.cat_id]}/${data.id}`}
+        />
+        <Layout
+          isMobile={isMobile}
+          Header={Header}
+          data={data}
+        >
+        <Content
+          id={id}
+          isMobile={isMobile}
+          data={data}
+        />
+        </Layout>
+      </>
     )
   }
 }

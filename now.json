@@ -1,6 +1,6 @@
 {
-  "version": 2,
   "name": "suzuki",
+  "version": 2,
   "alias": ["xetainhosaigon.com"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },

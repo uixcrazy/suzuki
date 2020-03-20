@@ -2,7 +2,6 @@ import React from 'react';
 import withStyles from 'react-jss';
 import TopMenu from '../layout/TopMenu';
 import Link from 'next/link';
-import { CDN_URL } from  '../../core/constants';
 
 const path = "/xe-tai-nho-suzuki/";
 const bannerItem = {
@@ -22,7 +21,7 @@ const Header = props => {
           <Link as={`${path}${bannerItem.id}`} href={`${path}${bannerItem.id}`}>
             <a className={classes.bannerLink}>
               <img
-                src={`${CDN_URL}${props.isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}
+                src={`${process.env.CDN_URL}${props.isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}
                 alt={bannerItem.name}
               />
             </a>

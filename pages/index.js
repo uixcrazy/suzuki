@@ -1,5 +1,6 @@
 import React from "react";
 import fetch from 'isomorphic-unfetch';
+import { NextSeo } from 'next-seo';
 import Layout from "../components/layout";
 import Cards from "../components/index/Cards";
 import Header from "../components/index/Header";
@@ -24,12 +25,11 @@ export default class Index extends React.Component {
     const { isMobile, data } = this.props;
     return (
       <>
-        {/* <NextSeo
+        <NextSeo
           title="Xe tải nhỏ | xe du lịch Suzuki"
-          description="Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn | dòng SUV hàng đầu Suzuki Ertiga"
+          description="Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn | và những mẫu xe đa dụng 7 chỗ Suzuki Ertiga"
           canonical="http://xetainhosaigon.com/"
-          site_name="Xe tải nhỏ Sài Gòn"
-        /> */}
+        />
         <Layout
           Header={Header}
           isMobile={isMobile}

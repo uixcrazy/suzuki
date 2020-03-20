@@ -1,7 +1,6 @@
 import React from 'react';
 import withStyles from 'react-jss';
 import Link from 'next/link';
-import { CDN_URL } from  '../../core/constants';
 
 const bannerItem = {
   id: 'ertiga',
@@ -17,7 +16,7 @@ const Banner = ({classes, isMobile}) => {
       <Link as={path} href={path}>
         <a className={classes.bannerLink}>
           <img
-            src={`${CDN_URL}${isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}
+            src={`${process.env.CDN_URL}${isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}
             alt={bannerItem.name}
           />
         </a>

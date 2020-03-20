@@ -13,7 +13,7 @@ const TopMenu = ({classes, isMobile}) => {
             <a className={classes.homelink}>
               <img
                 className={classes.logoImage}
-                src="/static/logo.jpg"
+                src="/logo.jpg"
                 alt="suzuki"
               />
             </a>

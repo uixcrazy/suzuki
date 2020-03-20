@@ -2,7 +2,7 @@
 import React from 'react';
 import HeaderDefault from './Header';
 import FooterDefault from './Footer';
-import QuickCallButton from './QuickCallButton'
+import QuickCallButton from './QuickCallButton';
 
 // import '../../core/css/style.scss';
 

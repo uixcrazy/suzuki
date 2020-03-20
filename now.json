@@ -11,6 +11,8 @@
     { "src": "/xe-du-lich-suzuki/(?<id>[^/]+)$", "dest": "/carry-suzuki?id=$id" },
     { "src": "/xe-tai-nho-suzuki", "dest": "/carry-suzuki-list" },
     { "src": "/xe-du-lich-suzuki", "dest": "/car-suzuki-list" },
+    { "src": "/xe-tai-nho-suzuki/", "dest": "/carry-suzuki-list" },
+    { "src": "/xe-du-lich-suzuki/", "dest": "/car-suzuki-list" },
     { "src": "/robots.txt", "dest": "/public/static/robots.txt" }
   ],
   "github": {

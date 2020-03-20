@@ -1,4 +1,5 @@
 import React from "react";
+import { NextSeo } from 'next-seo';
 import Layout from "../components/layout";
 import Cards from "../components/index/Cards";
 import Header from "../components/carry-suzuki-list/Header";
@@ -48,23 +49,29 @@ export default class CarrySuzukiList extends React.Component {
   render() {
     const { isMobile, data } = this.props;
     return (
-      <Layout
-        title='Đại lý xe tải | xe ô tô du lịch Suzuki'
-        Header={Header}
-        isMobile={isMobile}
-      >
-        <main style={{margin: '15px 0'}}>
-          <div className="container">
-            <h2 className={`h2 ${isMobile ? "mb" :''}`}>
-              Các dòng xe tải nhỏ / xe thương mại của <span>Suzuki</span>
-            </h2>
-            <Cards
-              isMobile={isMobile}
-              items={data}
-            />
-          </div>
-        </main>
-      </Layout>
+      <>
+        <NextSeo
+          title="Xe tải nhỏ | xe tải nhẹ | xe tải van chạy giờ cấm | Suzuki"
+          description="Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn"
+          canonical="http://xetainhosaigon.com/xe-tai-nho-suzuki"
+        />
+        <Layout
+          Header={Header}
+          isMobile={isMobile}
+        >
+          <main style={{margin: '15px 0'}}>
+            <div className="container">
+              <h2 className={`h2 ${isMobile ? "mb" :''}`}>
+                Các dòng xe tải nhỏ của <span>Suzuki</span>
+              </h2>
+              <Cards
+                isMobile={isMobile}
+                items={data}
+              />
+            </div>
+          </main>
+        </Layout>
+      </>
     )
   }
 }

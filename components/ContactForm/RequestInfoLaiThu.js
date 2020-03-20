@@ -9,6 +9,10 @@ const TYPE = [
     name: 'Suzuki Ertiga 2020'
   },
   {
+    id: 'suzuki-xl7',
+    name: 'Suzuki XL7'
+  },
+  {
     id: 'carry-pro',
     name: 'Suzuki Carry Pro 2020'
   },

@@ -2,12 +2,12 @@ import React from 'react';
 import withStyles from 'react-jss';
 import TopMenu from '../layout/TopMenu';
 
-const path = "/xe-tai-nho-suzuki/";
+const path = "/xe-du-lich-suzuki/";
 const bannerItem = {
-  id: 'carry-pro',
-  thumb: 'khuyenmai/carry_pro.jpg',
-  thumbMb: 'khuyenmai/carry_pro_mb.jpg',
-  name: 'Xe tải nhỏ khuyến mãi 2020',
+  id: 'ertiga',
+  thumb: 'ertiga/banner/ertiga-thumb.jpg',
+  thumbMb: 'ertiga/banner/ertiga-thumb-mb.jpg',
+  name: 'Ertiga 2020',
 }
 
 const Header = props => {
@@ -18,8 +18,7 @@ const Header = props => {
       <div className={`${classes.banner} ${props.isMobile ? classes.mb : ''}`}>
         <div className={classes.bannerCt}>
           <a className={classes.bannerLink}
-            href={`${process.env.MAIN_URL}${path}${bannerItem.id}`}
-          >
+            href={`${process.env.MAIN_URL}${path}${bannerItem.id}`}>
             <img
               src={`${process.env.CDN_URL}${props.isMobile ? bannerItem.thumbMb : bannerItem.thumb}`}
               alt={bannerItem.name}
@@ -38,10 +37,6 @@ const styles = {
     position: 'relative',
   },
   banner: {
-    height: 540,
-    '&$mb': {
-      height: 'auto',
-    }
   },
   bannerCt: {
     height: '100%',

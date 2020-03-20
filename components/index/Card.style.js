@@ -30,7 +30,7 @@ export default {
     transition: 'transform 0.8s cubic-bezier(0.44, 0.185, 0.575, 0.86)',
     maxWidth: '100%',
     verticalAlign: 'middle',
-    maxHeight: '320px',
+    // maxHeight: '320px',
   },
   productDesc: {
     background: '#fff',

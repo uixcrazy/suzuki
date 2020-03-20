@@ -18,3 +18,25 @@ export const isObjectEmpty = (obj) => Object.keys(obj).length === 0 && obj.const
 export function isNormalInteger(str) {
   return /^\+?(0|[1-9]\d*)$/.test(str);
 }
+
+export function getScrollbarWidth() {
+  const outer = document.createElement('div');
+  outer.style.visibility = 'hidden';
+  outer.style.width = '100px';
+  let widthNoScroll = 0;
+  let widthWithScroll = 0;
+  if (document.body) {
+    document.body.appendChild(outer);
+    widthNoScroll = outer.offsetWidth;
+    // force scrollbars
+    outer.style.overflow = 'scroll';
+    // add innerdiv
+    const inner = document.createElement('div');
+    inner.style.width = '100%';
+    outer.appendChild(inner);
+    widthWithScroll = inner.offsetWidth;
+    // remove divs
+    outer.parentNode.removeChild(outer);
+  }
+  return widthNoScroll - widthWithScroll;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
 import _debounce from 'lodash.debounce';
 import { StickyContainer, Sticky } from 'react-sticky';
@@ -8,7 +9,11 @@ import { Element, scroller } from 'react-scroll';
 import NavSecondary from './NavSecondary';
 import Article from './Article';
 import Cskh from './Cskh';
-import LaiThu from './LaiThu';
+
+const LaiThu = dynamic(
+  () => import('./LaiThu'),
+  { ssr: false }
+)
 
 export default class Index extends React.Component {
   router = {};

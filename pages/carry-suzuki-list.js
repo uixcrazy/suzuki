@@ -52,7 +52,7 @@ export default class CarrySuzukiList extends React.Component {
       <>
         <NextSeo
           title="Xe tải nhỏ | xe tải nhẹ | xe tải van chạy giờ cấm | Suzuki"
-          description="Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn"
+          description="Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn. Xe tải nhỏ từ 100 đến 300 triệu. Chất lượng Nhật Bản"
           canonical="http://xetainhosaigon.com/xe-tai-nho-suzuki"
         />
         <Layout

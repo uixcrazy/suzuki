@@ -40,9 +40,7 @@ const Header = ({classes, isMobile, data}) => {
 const styles = {
   mb: {},
   header: {
-    // boxShadow: '0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)',
     position: 'relative',
-    marginTop: 15,
     marginBottom: 10
   },
   breadcrumb: {

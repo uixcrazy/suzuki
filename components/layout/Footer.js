@@ -1,12 +1,12 @@
 import React from 'react';
 import { ADDRESS } from '../../core/constants';
 
-const Footer = props => {
+const Footer = ({ isMobile }) => {
   return (
     <footer style={{
       backgroundColor: 'var(--secondary)',
       color: '#c2dcea',
-      padding: '15px 0',
+      padding: isMobile ? '15px 0 80px' : '15px 0',
       textAlign: 'center',
     }}>
       <div className="container">

@@ -6,9 +6,9 @@ import { HOTLINE, HOTLINE_SHOW, MAIL, SLOGAN } from '../../core/constants';
 
 const TopMenu = ({classes, isMobile}) => {
   return (
-    <div className={`${classes.topNav} ${isMobile && 'mb'}`}>
+    <div className={`${classes.topNav} ${isMobile ? 'mb' : ''}`}>
       <div className="container">
-        <div className={`${classes.topNavCt} ${isMobile && 'mb'}`}>
+        <div className={`${classes.topNavCt} ${isMobile ? 'mb' : ''}`}>
           <Link href="/">
             <a className={classes.homelink}>
               <img

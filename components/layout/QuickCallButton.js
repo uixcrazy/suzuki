@@ -23,7 +23,7 @@ const QuickCallButton = ({classes, isMobile}) => {
 export default withStyles({
   grpCal: {
     position: 'fixed',
-    right: 30,
+    right: 0,
     top: '45%',
     zIndex: '1000',
     '&.mb': {

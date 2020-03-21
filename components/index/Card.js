@@ -32,7 +32,7 @@ const Card = ({
             <p className={classes.productSlogan}>{item.slogan}</p>
           </div>
           <div className={classes.productPrice}>
-            {item.price} <small>{typeof item.price === 'number' ? 'TRIỆU' : ''}</small>
+            {item.price}<small>{typeof item.price === 'number' ? 'TRIỆU' : ''}</small>
           </div>
         </div>
       </a>

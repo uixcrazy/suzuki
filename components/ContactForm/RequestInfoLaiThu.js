@@ -127,6 +127,7 @@ class RequestInfoLaiThu extends Component {
           <input
             type="text"
             id="name"
+            autoComplete="off"
             value={this.state.name}
             onChange={this.handleChange.bind(this, 'name')} />
         </div>
@@ -135,6 +136,7 @@ class RequestInfoLaiThu extends Component {
           <input
             type="text"
             id="sdt"
+            autoComplete="off"
             value={this.state.sdt}
             onChange={this.handleChange.bind(this, 'sdt')} />
         </div>
@@ -143,6 +145,7 @@ class RequestInfoLaiThu extends Component {
           <input
             type="email"
             id="email"
+            autoComplete="off"
             value={this.state.email}
             onChange={this.handleChange.bind(this, 'email')} />
         </div>
@@ -218,5 +221,6 @@ export default withStyles({
     borderRadius: '4px',
     textTransform: 'uppercase',
     fontWeight: 'bold',
+    cursor: 'default',
   }
 })(RequestInfoLaiThu);

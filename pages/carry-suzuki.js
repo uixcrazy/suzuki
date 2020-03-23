@@ -24,7 +24,7 @@ export default class CarrySuzuki extends React.Component {
     return (
       <>
         <NextSeo
-          title={`${data.name_vi || data.name} - ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki`}
+          title={`Xe tải nhỏ Sài Gòn | ${data.name_vi || data.name} - ${data.keywords ? data.keywords[0] : BREADCRUMB[data.cat_id]} | Suzuki`}
           description={data.description}
           canonical={`http://xetainhosaigon.com${PATH[data.cat_id]}/${data.id}`}
         />

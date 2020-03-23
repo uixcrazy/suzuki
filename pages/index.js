@@ -26,7 +26,7 @@ export default class Index extends React.Component {
     return (
       <>
         <NextSeo
-          title="Xe tải nhỏ | xe du lịch Suzuki"
+          title="Xe tải nhỏ Sài Gòn | xe du lịch Suzuki"
           description="Đại lý chính thức của Suzuki | phân phối xe tải nhẹ, xe tải nhỏ giá tốt nhất Sài Gòn | và những mẫu xe đa dụng 7 chỗ Suzuki Ertiga. Xe tải nhỏ tầm 100 triệu. Chất lượng Nhật Bản"
           canonical="http://xetainhosaigon.com/"
         />

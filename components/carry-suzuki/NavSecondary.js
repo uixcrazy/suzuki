@@ -42,7 +42,7 @@ const styles = {
     borderTop: '1px solid #e5e5e5',
     borderBottom: '1px solid #e5e5e5',
     '&.mb': {
-      fontSize: 14,
+      fontSize: '0.875rem',
     }
   },
   sidenavCt: {

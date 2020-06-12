@@ -47,7 +47,7 @@ export default {
     transition: 'all 0.5s ease',
   },
   productSlogan: {
-    fontSize: '13px',
+    fontSize: '0.813rem',
     color: '#999',
   },
   productPrice: {
@@ -59,7 +59,7 @@ export default {
     height: 50,
     flexBasis: 120,
     position: 'relative',
-    fontSize: 18,
+    fontSize: '1.125rem',
     fontWeight: 'bold',
     textAlign: 'right',
     alignSelf: 'flex-end',

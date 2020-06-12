@@ -28,12 +28,12 @@ export default withStyles({
   title: {
     color: '#2776b0',
     display: 'block',
-    fontSize: '24px',
+    fontSize: '1.5rem',
     fontWeight: 'bold',
   },
   daiviet: {
   display: 'block',
-  fontSize: '22px',
+  fontSize: '1.375rem',
   fontWeight: 'bold',
 },
 })(LaiThu);

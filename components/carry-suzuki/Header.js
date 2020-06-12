@@ -54,7 +54,7 @@ const styles = {
       display: 'flex',
       '& li': {
         paddingRight: 10,
-        fontSize: '14px',
+        fontSize: '0.875rem',
         '& a': {
           color: '#999',
           textDecoration: 'none',
@@ -82,7 +82,7 @@ const styles = {
   },
   slogan: {
     color: '#999',
-    fontSize: 16,
+    fontSize: '1rem',
   }
 };
 

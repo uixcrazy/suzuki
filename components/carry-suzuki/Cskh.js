@@ -37,7 +37,7 @@ export default withStyles({
   },
   h3: {
     display: 'block',
-    fontSize: '18px',
+    fontSize: '1.125rem',
     color: '#777',
     fontWeight: 'bold',
   },

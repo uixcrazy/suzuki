@@ -231,14 +231,14 @@ export default withStyles({
     '& textarea': {
       color: '#555',
       '&::placeholder': {
-        fontSize: 12,
+        fontSize: '0.75rem',
         color: '#a7b4bf',
       }
     }
   },
   title: {
     textAlign: 'center',
-    fontSize: '22px',
+    fontSize: '1.375rem',
     fontWeight: 'bold',
   },
   noteForU: {
@@ -256,7 +256,7 @@ export default withStyles({
     zIndex: '1',
     position: 'absolute',
     background: 'transparent',
-    fontSize: '20px',
+    fontSize: '1.25rem',
     padding: '10px 0 10px 20px',
     textTransform: 'uppercase',
     fontWeight: 'bold',

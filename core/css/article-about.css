@@ -1,12 +1,12 @@
 .article-about {
   color: #555;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .article-about section {
   margin-top: 20px;
 }
 .article-about-heading {
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -39,7 +39,7 @@
 /* SPECIFICATIONS */
 
 .grid_thongso .node_thongso .node_title {
-  font-size: 20px;
+  font-size: 1.25rem;
   padding-top: 5px;
   padding-bottom: 5px;
   text-transform: uppercase;

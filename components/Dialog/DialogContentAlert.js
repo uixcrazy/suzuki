@@ -49,7 +49,7 @@ const styles = {
     borderRadius: 2,
     boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.5)",
     backgroundColor: "#434a54",
-    fontSize: 12,
+    fontSize: '0.75rem',
     fontWeight: 300,
     color: "#d1d1d1",
   },

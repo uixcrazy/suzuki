@@ -1,4 +1,4 @@
-Sitemap: https://hostname.com/api/sitemap.xml
+Sitemap: https://xetainhosaigon.com/sitemap.xml
 
 User-agent: *
 Allow: /*
